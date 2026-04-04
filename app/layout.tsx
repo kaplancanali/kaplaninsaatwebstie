@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { ThemeProvider } from '@/components/theme-provider'
+import { LanguageProvider } from '@/lib/language-context'
 import './globals.css'
 
 const inter = Inter({ 
@@ -22,7 +24,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#1a1a1a',
+  themeColor: '#fafafa',
   width: 'device-width',
   initialScale: 1,
 }
@@ -33,10 +35,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="tr" className="dark">
+    <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} font-sans antialiased`}>
-        {children}
-        <Analytics />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange={false}
+        >
+          <LanguageProvider>
+            {children}
+            <Analytics />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   )

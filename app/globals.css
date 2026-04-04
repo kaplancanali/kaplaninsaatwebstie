@@ -121,8 +121,63 @@
   }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* ── Scroll-reveal ───────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1);    }
+}
+
+/* Base hidden → animated visible */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Hero entrance (above-fold, no observer needed) ─ */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.hero-item {
+  opacity: 0;
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ── Infinite marquee ────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0);    }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 45s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ── Utility: fade-up shorthand ─────────────────── */
+.animate-fade-up {
+  animation: fade-up 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.animate-scale-in {
+  animation: scale-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
 }

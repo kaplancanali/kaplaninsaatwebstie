@@ -7,6 +7,7 @@ import { ServiceAreas } from "@/components/service-areas"
 import { WhyUs } from "@/components/why-us"
 import { Reviews } from "@/components/reviews"
 import { Process } from "@/components/process"
+import { FAQ } from "@/components/faq"
 import { CTA } from "@/components/cta"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -25,6 +26,7 @@ export default function Home() {
       <WhyUs />
       <Reviews />
       <Process />
+      <FAQ />
       <CTA />
       <Contact />
       <Footer />
