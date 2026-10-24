@@ -107,12 +107,19 @@ export function GalleryGrid({
           className="mt-10 columns-2 gap-3 md:columns-3 md:gap-4 lg:columns-4"
         >
           {visible.map((item, i) => (
-            <li key={item.image.src} className="mb-3 break-inside-avoid md:mb-4">
+            <motion.li
+              key={item.image.src}
+              className="mb-3 break-inside-avoid md:mb-4"
+              initial={reduce ? false : { opacity: 0, y: 28, scale: 0.94 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: (i % 4) * 0.07, ease: [0.16, 1, 0.3, 1] }}
+            >
               <button
                 type="button"
                 onClick={() => setIndex(i)}
                 aria-label={`${item.alt} — ${labels.open}`}
-                className="group relative block w-full overflow-hidden rounded-2xl border bg-muted"
+                className="group relative block w-full overflow-hidden rounded-2xl border bg-muted shadow-soft transition-[box-shadow,transform] duration-500 ease-out-expo hover:-translate-y-1 hover:shadow-lift"
               >
                 <Image
                   src={item.image}
@@ -120,6 +127,10 @@ export function GalleryGrid({
                   placeholder="blur"
                   sizes="(min-width: 1024px) 300px, (min-width: 768px) 33vw, 50vw"
                   className="h-auto w-full transition-transform duration-700 ease-out-expo group-hover:scale-105"
+                />
+                <span
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-copper-600 to-copper-400 transition-transform duration-500 ease-out-expo group-hover:scale-x-100 group-focus-visible:scale-x-100"
                 />
                 <span
                   aria-hidden
@@ -131,7 +142,7 @@ export function GalleryGrid({
                   </span>
                 </span>
               </button>
-            </li>
+            </motion.li>
           ))}
         </motion.ul>
       </AnimatePresence>

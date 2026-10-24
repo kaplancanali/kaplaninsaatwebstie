@@ -196,6 +196,22 @@
   background-size: 48px 48px;
 }
 
+/* ── Accordion (<details>) ─────────────────────────────────────────
+   Answers stay in the HTML; supporting browsers animate the height. */
+:root {
+  interpolate-size: allow-keywords;
+}
+details::details-content {
+  block-size: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: block-size 0.35s var(--ease-out-expo), opacity 0.35s, content-visibility 0.35s allow-discrete;
+}
+details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
 details > summary {
   list-style: none;
 }

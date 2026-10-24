@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/reveal"
+import { ImageReveal } from "@/components/ui/image-reveal"
 import { GALLERY } from "@/lib/data/gallery"
 import { SERVICE_CATEGORIES, servicesInCategory } from "@/lib/data/services/nav"
 import { SERVICES_BASE, servicePath } from "@/lib/routes"
@@ -52,12 +53,10 @@ export function Services({ lang }: { lang: Lang }) {
                 delay={i * 0.08}
                 className={cn(featured && "lg:col-span-2")}
               >
-                <article className={cn("group flex h-full flex-col overflow-hidden rounded-3xl border bg-card shadow-soft transition-shadow duration-300 hover:shadow-lift", featured && "lg:grid lg:grid-cols-2")}>
-                  <div
-                    className={cn(
-                      "relative overflow-hidden",
-                      featured ? "aspect-[16/10] lg:aspect-auto lg:min-h-[420px]" : "aspect-[16/8]"
-                    )}
+                <article className={cn("group flex h-full flex-col overflow-hidden rounded-3xl border bg-card shadow-soft transition-[box-shadow,transform] duration-500 ease-out-expo hover:-translate-y-1.5 hover:shadow-lift", featured && "lg:grid lg:grid-cols-2")}>
+                  <ImageReveal
+                    delay={0.15 + i * 0.08}
+                    className={featured ? "aspect-[16/10] lg:aspect-auto lg:min-h-[420px]" : "aspect-[16/8]"}
                   >
                     <Image
                       src={IMAGES[i]}
@@ -71,7 +70,7 @@ export function Services({ lang }: { lang: Lang }) {
                     <span className="absolute bottom-4 left-5 font-heading text-5xl font-extrabold text-white/90 tabular-nums md:text-6xl">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                  </div>
+                  </ImageReveal>
 
                   <div className={cn("flex flex-col p-6 md:p-8", featured && "lg:p-10")}>
                     <h3 className="text-2xl font-extrabold text-foreground">{service.title}</h3>
@@ -81,13 +80,13 @@ export function Services({ lang }: { lang: Lang }) {
                       <div>
                         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand">{s.tipsTitle}</p>
                         <ul className="mt-3 space-y-2.5">
-                          {service.tips.map((tip) => (
-                            <li key={tip} className="flex gap-2.5 text-sm text-foreground">
+                          {service.tips.map((tip, j) => (
+                            <Reveal as="li" key={tip} y={10} delay={0.35 + j * 0.08} className="flex gap-2.5 text-sm text-foreground">
                               <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
                                 <Check className="size-3.5" aria-hidden />
                               </span>
                               {tip}
-                            </li>
+                            </Reveal>
                           ))}
                         </ul>
                       </div>

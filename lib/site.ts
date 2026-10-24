@@ -1,3 +1,5 @@
+import { SERVICE_AREAS } from "@/lib/data/areas"
+
 export const SITE = {
   name: "Kaplan İnşaat",
   url: "https://mkaplaninsaat.com",
@@ -13,7 +15,6 @@ export const SITE = {
   locale: "tr_TR",
   region: "Kocaeli",
   /** Districts served — also used for SEO copy and structured data. */
-  areas: ["İzmit", "Gebze", "Darıca", "Körfez", "Başiskele", "Gölcük", "Kartepe", "Kandıra"],
+  areas: SERVICE_AREAS.map((a) => a.name),
   ogImage: "/gallery/cati/3.jpg",
-  whyUsImage: "/gallery/cati/metal-cati-trapez.jpg",
 } as const

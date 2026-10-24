@@ -5,9 +5,9 @@ import { Phone, Instagram } from "lucide-react"
 import { SiteLogo } from "@/components/site-logo"
 import { useLanguage } from "@/lib/language-context"
 import { SERVICE_NAV } from "@/lib/data/services/nav"
+import { SERVICE_AREAS } from "@/lib/data/areas"
 import { SERVICES_BASE, servicePath } from "@/lib/routes"
 
-const areas = ["İzmit", "Gebze", "Darıca", "Körfez", "Başiskele", "Gölcük", "Kartepe", "Kandıra"]
 
 export function Footer() {
   const { t, lang } = useLanguage()
@@ -58,8 +58,8 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-foreground mb-4">{f.areasTitle}</h3>
             <ul className="grid grid-cols-2 gap-2">
-              {areas.map((area, index) => (
-                <li key={index}><span className="text-muted-foreground text-sm">{area}</span></li>
+              {SERVICE_AREAS.map((area) => (
+                <li key={area.id}><span className="text-muted-foreground text-sm">{area.name}</span></li>
               ))}
             </ul>
           </div>

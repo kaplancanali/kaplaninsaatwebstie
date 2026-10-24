@@ -149,6 +149,11 @@ const tr = {
     title: "Kocaeli Genelinde Hizmet",
     subtitle:
       "İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra ve çevresinde profesyonel çatı ve oluk hizmetleri sunuyoruz.",
+    mapLabel: "Kocaeli hizmet bölgeleri haritası (temsili)",
+    sea: "Karadeniz",
+    gulf: "İzmit Körfezi",
+    activeHint: "Bir ilçenin üzerine gelin veya seçin",
+    servicesLink: "Hizmetlerimizi inceleyin",
     richText:
       "Kocaeli çatı ustası olarak İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe ve Kandıra bölgelerinde hizmet veriyoruz. Başiskele çatı ustası, Gölcük oluk sistemi, Kartepe çatı izolasyon ve Kandıra eksiz oluk konularında uzman ekibimizle yanınızdayız. Kocaeli genelinde ücretsiz keşif hizmeti sunuyoruz.",
   },
@@ -194,6 +199,10 @@ const tr = {
     subtitle: "Kocaeli genelinde yüzlerce mutlu müşterimizden bazılarının görüşleri",
     prev: "Önceki yorum",
     next: "Sonraki yorum",
+    goTo: "Yorum grubuna git",
+    rating: "5 üzerinden 5 yıldız",
+    carousel: "Müşteri yorumları",
+    slide: "yorum",
     items: [
       {
         name: "Ahmet Yılmaz", location: "İzmit",
@@ -532,6 +541,11 @@ const en: typeof tr = {
     title: "Serving All of Kocaeli",
     subtitle:
       "Professional roofing and gutter services in İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra and surrounding areas.",
+    mapLabel: "Map of service areas in Kocaeli (illustrative)",
+    sea: "Black Sea",
+    gulf: "Gulf of İzmit",
+    activeHint: "Hover over or select a district",
+    servicesLink: "Explore our services",
     richText:
       "As a Kocaeli roofing contractor we serve İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe and Kandıra. Our expert team is ready for roofing, seamless gutter systems, roof insulation and all related services throughout the province. Free inspection available across Kocaeli.",
   },
@@ -575,6 +589,10 @@ const en: typeof tr = {
     subtitle: "Reviews from some of our hundreds of satisfied customers across Kocaeli",
     prev: "Previous review",
     next: "Next review",
+    goTo: "Go to review group",
+    rating: "5 out of 5 stars",
+    carousel: "Customer reviews",
+    slide: "review",
     items: [
       {
         name: "Ahmet Yılmaz", location: "İzmit",

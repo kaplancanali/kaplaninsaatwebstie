@@ -13,7 +13,9 @@ export function Gallery({ lang }: { lang: Lang }) {
 
   return (
     <section id="galeri" aria-labelledby="gallery-title" className="relative overflow-hidden bg-surface py-20 md:py-28">
-      <div aria-hidden className="pattern-gutter absolute inset-x-0 top-0 h-40 text-brand/[0.07] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
+      <div aria-hidden className="absolute inset-x-0 top-0 h-40 [mask-image:linear-gradient(to_bottom,black,transparent)]">
+        <div className="pattern-gutter size-full text-brand/[0.1]" />
+      </div>
       <div className="site-container relative">
         <Reveal>
           <SectionHeading id="gallery-title" eyebrow={g.badge} title={g.title} description={g.subtitle} />
