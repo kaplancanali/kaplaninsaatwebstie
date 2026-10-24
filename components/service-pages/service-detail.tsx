@@ -11,7 +11,7 @@ import { CtaBand } from "@/components/service-pages/cta-band"
 import { SERVICE_NAV } from "@/lib/data/services/nav"
 import { getServicePage, type ServicePage } from "@/lib/data/services"
 import { SERVICES_BASE, sectionHref, servicePath } from "@/lib/routes"
-import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd } from "@/lib/structured-data"
+import { breadcrumbJsonLd, faqJsonLd, serviceJsonLd, webPageJsonLd } from "@/lib/structured-data"
 import { getT, LANG_PATH, type Lang } from "@/lib/translations"
 import { SITE } from "@/lib/site"
 import { cn } from "@/lib/utils"
@@ -35,6 +35,7 @@ export function ServiceDetail({ service, lang }: { service: ServicePage; lang: L
       <JsonLdScript
         data={[
           serviceJsonLd({ name: service.name[lang], description: c.metaDescription, path, image: service.image.src, lang }),
+          webPageJsonLd({ name: c.metaTitle, description: c.metaDescription, path, lang }),
           breadcrumbJsonLd(crumbs),
           faqJsonLd(c.faq),
         ]}

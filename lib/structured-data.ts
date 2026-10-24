@@ -4,6 +4,26 @@ type Crumb = { name: string; path: string }
 
 export const absoluteUrl = (path: string) => new URL(path, SITE.url).toString()
 
+/** Stable @ids so every page's JSON-LD links back to one business and website. */
+export const BUSINESS_ID = `${SITE.url}/#business`
+export const WEBSITE_ID = `${SITE.url}/#website`
+
+export function webPageJsonLd(opts: { name: string; description: string; path: string; lang: string }) {
+  const url = absoluteUrl(opts.path)
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    url,
+    name: opts.name,
+    description: opts.description,
+    inLanguage: opts.lang,
+    isPartOf: { "@id": WEBSITE_ID },
+    about: { "@id": BUSINESS_ID },
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", "[data-speakable]"] },
+  }
+}
+
 export function breadcrumbJsonLd(crumbs: Crumb[]) {
   return {
     "@context": "https://schema.org",
@@ -44,7 +64,7 @@ export function serviceJsonLd(opts: {
     url: absoluteUrl(opts.path),
     image: absoluteUrl(opts.image),
     inLanguage: opts.lang,
-    provider: { "@type": "RoofingContractor", name: SITE.name, url: SITE.url },
+    provider: { "@id": BUSINESS_ID },
     areaServed: SITE.areas.map((name) => ({ "@type": "City", name })),
   }
 }

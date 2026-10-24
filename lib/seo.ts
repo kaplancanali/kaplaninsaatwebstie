@@ -23,6 +23,21 @@ export function buildPageMetadata({ lang, title, description, paths, image, ogDe
     title,
     description,
     authors: [{ name: SITE.name }],
+    icons: {
+      icon: [
+        { url: "/favicon.ico", sizes: "48x48" },
+        { url: "/icon-96.png", sizes: "96x96", type: "image/png" },
+        { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      ],
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    },
+    manifest: "/manifest.webmanifest",
+    // Let search engines and AI answer engines quote freely and show large previews.
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large", "max-video-preview": -1 },
+    },
     alternates: {
       canonical: paths[lang],
       languages: { tr: paths.tr, en: paths.en, "x-default": paths.tr },

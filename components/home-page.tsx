@@ -10,11 +10,13 @@ import { Process } from "@/components/sections/process"
 import { FAQ } from "@/components/sections/faq"
 import { CTA } from "@/components/cta"
 import { Contact } from "@/components/contact"
+import { HomeJsonLd } from "@/components/json-ld"
 import type { Lang } from "@/lib/translations"
 
 export function HomePage({ lang }: { lang: Lang }) {
   return (
     <SiteChrome>
+      <HomeJsonLd lang={lang} />
       <Hero lang={lang} />
       <TrustBand lang={lang} />
       <Services lang={lang} />

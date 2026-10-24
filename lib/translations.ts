@@ -123,7 +123,7 @@ const tr = {
     instagram: "Daha Fazlası İçin Instagram",
     photoPreview: "Fotoğraf önizleme",
     openImage: "Fotoğrafı büyüt",
-    tabsLabel: "Galeri kategorileri",
+    photos: "fotoğraf",
     categories: [
       {
         label: "Çatı Sistemleri",
@@ -516,7 +516,7 @@ const en: typeof tr = {
     instagram: "More on Instagram",
     photoPreview: "Photo preview",
     openImage: "Enlarge photo",
-    tabsLabel: "Gallery categories",
+    photos: "photos",
     categories: [
       {
         label: "Roofing Systems",

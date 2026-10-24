@@ -68,7 +68,7 @@ export function Hero({ lang }: { lang: Lang }) {
             {h.titleAfter}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:150ms] [animation-fill-mode:backwards]">
+          <p data-speakable className="mt-6 max-w-2xl text-lg leading-relaxed text-white/80 md:text-xl animate-in fade-in slide-in-from-bottom-4 duration-700 [animation-delay:150ms] [animation-fill-mode:backwards]">
             {h.description}
           </p>
 

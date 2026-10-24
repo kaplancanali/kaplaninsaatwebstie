@@ -23,13 +23,16 @@ export function Gallery({ lang }: { lang: Lang }) {
 
         <GalleryGrid
           lang={lang}
-          tabs={SERVICE_CATEGORIES.map((id, i) => ({
+          columns={SERVICE_CATEGORIES.map((id, i) => ({
             id,
             label: g.categories[i].label,
             description: g.categories[i].description,
+            items: GALLERY.filter((item) => item.category === id).map((item) => ({
+              image: item.image,
+              alt: item.alt[lang],
+            })),
           }))}
-          items={GALLERY.map((item) => ({ category: item.category, image: item.image, alt: item.alt[lang] }))}
-          labels={{ tabs: g.tabsLabel, open: g.openImage }}
+          labels={{ open: g.openImage, photos: g.photos }}
         />
 
         <div className="mt-12 text-center">

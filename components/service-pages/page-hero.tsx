@@ -34,7 +34,7 @@ export function PageHero({ lang, crumbs, eyebrow, title, lead, image, imageAlt }
             {eyebrow}
           </p>
           <h1 className="mt-3 text-[clamp(2rem,4.5vw,3.5rem)] font-extrabold leading-[1.08] text-balance">{title}</h1>
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{lead}</p>
+          <p data-speakable className="mt-5 max-w-2xl text-lg leading-relaxed text-white/80">{lead}</p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg">
               <a href={sectionHref(lang, "iletisim", false)}>

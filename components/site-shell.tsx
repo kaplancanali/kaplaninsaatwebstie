@@ -1,6 +1,7 @@
 import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { JsonLd } from "@/components/json-ld"
+import { GoogleAnalytics } from "@/components/google-analytics"
 import { LanguageProvider } from "@/lib/language-context"
 import { inter, manrope } from "@/lib/fonts"
 import { getT, type Lang } from "@/lib/translations"
@@ -19,9 +20,10 @@ export function SiteShell({ lang, children }: { lang: Lang; children: React.Reac
         </a>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           <LanguageProvider lang={lang}>
-            <JsonLd />
+            <JsonLd lang={lang} />
             {children}
             <Analytics />
+            <GoogleAnalytics />
           </LanguageProvider>
         </ThemeProvider>
       </body>

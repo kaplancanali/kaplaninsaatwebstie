@@ -16,5 +16,7 @@ export const SITE = {
   region: "Kocaeli",
   /** Districts served — also used for SEO copy and structured data. */
   areas: SERVICE_AREAS.map((a) => a.name),
-  ogImage: "/gallery/cati/3.jpg",
+  ogImage: "/og-image.jpg",
+  /** Google Analytics 4 measurement ID. */
+  gaId: "G-R4BR4PJXX0",
 } as const
