@@ -39,9 +39,9 @@ export function ReviewsCarousel({ reviews, labels }: { reviews: Review[]; labels
   return (
     <div role="region" aria-roledescription="carousel" aria-label={labels.carousel} onKeyDown={onKeyDown}>
       <div ref={viewportRef} className="-mx-2 overflow-hidden px-2 py-2">
-        <ul className="-ml-5 flex touch-pan-y">
+        <div className="-ml-5 flex touch-pan-y">
           {reviews.map((review, i) => (
-            <li
+            <div
               key={review.name}
               role="group"
               aria-roledescription={labels.slide}
@@ -71,9 +71,9 @@ export function ReviewsCarousel({ reviews, labels }: { reviews: Review[]; labels
                   </span>
                 </figcaption>
               </figure>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
 
       <div className="mt-8 flex items-center justify-between gap-4">

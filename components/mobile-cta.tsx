@@ -24,7 +24,7 @@ export function MobileCTA() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={t.whatsapp.aria}
-          className="flex h-12 items-center justify-center gap-2 rounded-xl bg-[#1fa855] font-semibold text-white active:translate-y-px"
+          className="flex h-12 items-center justify-center gap-2 rounded-xl bg-[#15803d] font-semibold text-white active:translate-y-px"
         >
           <MessageCircle className="size-5" aria-hidden />
           WhatsApp

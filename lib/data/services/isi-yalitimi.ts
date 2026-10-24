@@ -13,7 +13,7 @@ export const isiYalitimi: ServicePage = {
   content: {
     tr: {
       title: "Çatı Isı Yalıtımı Nedir? Taş Yünü, XPS ve Poliüretan Uygulamaları",
-      metaTitle: "Çatı Isı Yalıtımı Nedir? Taş Yünü, XPS, Poliüretan | Kaplan İnşaat",
+      metaTitle: "Çatı Isı Yalıtımı Nedir? Taş Yünü, XPS, Poliüretan | MKaplan İnşaat",
       metaDescription:
         "Çatı ısı yalıtımı nedir, hangi malzemeler kullanılır, ne kadar tasarruf sağlar? Taş yünü, XPS ve poliüretan köpük çatı yalıtımı için Kocaeli'de ücretsiz keşif.",
       summary: "Taş yünü, XPS ve poliüretan köpük ile çatıdan kaçan ısıyı azaltan yalıtım uygulamaları.",
@@ -88,7 +88,7 @@ export const isiYalitimi: ServicePage = {
     },
     en: {
       title: "What Is Roof Insulation? Stone Wool, XPS and Polyurethane",
-      metaTitle: "What Is Roof Insulation? Stone Wool, XPS, Polyurethane | Kaplan İnşaat",
+      metaTitle: "What Is Roof Insulation? Stone Wool, XPS, Polyurethane | MKaplan İnşaat",
       metaDescription:
         "What roof insulation is, which materials are used and how much it saves. Stone wool, XPS and polyurethane foam roof insulation in Kocaeli with a free inspection.",
       summary: "Stone wool, XPS and polyurethane foam insulation that cuts heat loss through the roof.",

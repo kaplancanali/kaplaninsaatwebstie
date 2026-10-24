@@ -2,9 +2,10 @@ import { Analytics } from "@vercel/analytics/next"
 import { ThemeProvider } from "@/components/theme-provider"
 import { JsonLd } from "@/components/json-ld"
 import { GoogleAnalytics } from "@/components/google-analytics"
+import { MotionProvider } from "@/components/motion-provider"
 import { LanguageProvider } from "@/lib/language-context"
 import { inter, manrope } from "@/lib/fonts"
-import { getT, type Lang } from "@/lib/translations"
+import { clientStrings, getT, type Lang } from "@/lib/translations"
 import "@/app/globals.css"
 
 /** Shared <html>/<body> for both language root layouts. */
@@ -18,10 +19,10 @@ export function SiteShell({ lang, children }: { lang: Lang; children: React.Reac
         >
           {getT(lang).common.skipToContent}
         </a>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <LanguageProvider lang={lang}>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <LanguageProvider lang={lang} t={clientStrings(getT(lang))}>
             <JsonLd lang={lang} />
-            {children}
+            <MotionProvider>{children}</MotionProvider>
             <Analytics />
             <GoogleAnalytics />
           </LanguageProvider>

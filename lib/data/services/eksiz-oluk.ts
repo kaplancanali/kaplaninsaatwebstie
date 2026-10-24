@@ -13,7 +13,7 @@ export const eksizOluk: ServicePage = {
   content: {
     tr: {
       title: "Eksiz Oluk Nedir? Yerinde Üretim Derzsiz Oluk Sistemleri",
-      metaTitle: "Eksiz Oluk Nedir? Yerinde Üretim Oluk Sistemleri | Kaplan İnşaat",
+      metaTitle: "Eksiz Oluk Nedir? Yerinde Üretim Oluk Sistemleri | MKaplan İnşaat",
       metaDescription:
         "Eksiz oluk nedir, parçalı oluktan farkı ve avantajları. Alüminyum ve çelik eksiz oluk sistemleri yerinde üretimle Kocaeli genelinde. Ücretsiz keşif.",
       summary: "Özel makineyle yerinde, tek parça üretilen; ek yeri olmadığı için sızdırmayan oluklar.",
@@ -78,7 +78,7 @@ export const eksizOluk: ServicePage = {
     },
     en: {
       title: "What Is a Seamless Gutter? On-site Produced Jointless Gutter Systems",
-      metaTitle: "What Is a Seamless Gutter? On-site Gutter Systems | Kaplan İnşaat",
+      metaTitle: "What Is a Seamless Gutter? On-site Gutter Systems | MKaplan İnşaat",
       metaDescription:
         "What a seamless gutter is, how it differs from sectional gutters and its benefits. Aluminium and steel seamless gutters produced on-site across Kocaeli. Free inspection.",
       summary: "Gutters formed in one piece on-site by a special machine — no joints, no leaks.",

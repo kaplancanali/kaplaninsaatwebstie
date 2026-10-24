@@ -13,7 +13,7 @@ export const terasSuYalitimi: ServicePage = {
   content: {
     tr: {
       title: "Teras ve Düz Çatı Su Yalıtımı",
-      metaTitle: "Teras ve Düz Çatı Su Yalıtımı Nasıl Yapılır? | Kaplan İnşaat",
+      metaTitle: "Teras ve Düz Çatı Su Yalıtımı Nasıl Yapılır? | MKaplan İnşaat",
       metaDescription:
         "Teras su yalıtımı nasıl yapılır? Düz çatı, teras ve balkonlarda sızıntıyı kalıcı olarak çözen membran ve likit yalıtım uygulamaları. Kocaeli'de ücretsiz keşif.",
       summary: "Su biriktiren ve alt kata sızdıran teras, düz çatı ve balkonlar için kalıcı su yalıtımı.",
@@ -82,7 +82,7 @@ export const terasSuYalitimi: ServicePage = {
     },
     en: {
       title: "Terrace and Flat Roof Waterproofing",
-      metaTitle: "How Is Terrace and Flat Roof Waterproofing Done? | Kaplan İnşaat",
+      metaTitle: "How Is Terrace and Flat Roof Waterproofing Done? | MKaplan İnşaat",
       metaDescription:
         "How terrace waterproofing is done. Membrane and liquid waterproofing that permanently fixes leaks on flat roofs, terraces and balconies. Free inspection in Kocaeli.",
       summary: "Lasting waterproofing for terraces, flat roofs and balconies that pool water or leak below.",

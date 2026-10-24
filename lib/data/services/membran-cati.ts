@@ -13,7 +13,7 @@ export const membranCati: ServicePage = {
   content: {
     tr: {
       title: "Membran Çatı Nedir? Bitümlü Membran ile Su Yalıtımı",
-      metaTitle: "Membran Çatı Nedir? Bitümlü Membran Uygulaması | Kaplan İnşaat",
+      metaTitle: "Membran Çatı Nedir? Bitümlü Membran Uygulaması | MKaplan İnşaat",
       metaDescription:
         "Membran çatı nedir, bitümlü membran nasıl uygulanır, hangi çatılarda kullanılır? Düz çatı ve teraslarda membran su yalıtımı için Kocaeli'de ücretsiz keşif.",
       summary: "Düz çatı, teras ve eğimli çatı altlarında bitümlü membran ile kalıcı su yalıtımı.",
@@ -85,7 +85,7 @@ export const membranCati: ServicePage = {
     },
     en: {
       title: "What Is a Membrane Roof? Waterproofing with Bituminous Membrane",
-      metaTitle: "What Is a Membrane Roof? Bituminous Membrane | Kaplan İnşaat",
+      metaTitle: "What Is a Membrane Roof? Bituminous Membrane | MKaplan İnşaat",
       metaDescription:
         "What a membrane roof is, how bituminous membrane is applied and where it is used. Membrane waterproofing for flat roofs and terraces in Kocaeli with a free inspection.",
       summary: "Lasting waterproofing with bituminous membrane on flat roofs, terraces and under pitched roofs.",

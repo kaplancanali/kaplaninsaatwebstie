@@ -14,7 +14,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={t.whatsapp.aria}
-      className="group fixed bottom-6 right-6 z-50 hidden size-14 items-center justify-center rounded-full bg-[#1fa855] text-white shadow-lift transition-transform duration-300 hover:scale-110 lg:flex"
+      className="group fixed bottom-6 right-6 z-50 hidden size-14 items-center justify-center rounded-full bg-[#15803d] text-white shadow-lift transition-transform duration-300 hover:scale-110 lg:flex"
     >
       <span aria-hidden className="absolute inset-0 rounded-full bg-[#25D366] opacity-30 motion-safe:animate-ping" />
       <MessageCircle className="relative size-7" aria-hidden />

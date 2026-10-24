@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react"
 import Image, { type StaticImageData } from "next/image"
 import {
   animate,
-  motion,
+  m,
   useAnimationFrame,
   useInView,
   useMotionValue,
@@ -61,7 +61,7 @@ function TwistCard({
   })
 
   return (
-    <motion.button
+    <m.button
       type="button"
       onClick={onOpen}
       onFocus={onFocusCard}
@@ -86,7 +86,7 @@ function TwistCard({
           <ZoomIn className="size-4 shrink-0" />
         </span>
       </span>
-    </motion.button>
+    </m.button>
   )
 }
 

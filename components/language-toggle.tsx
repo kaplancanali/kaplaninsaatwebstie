@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation"
 import { useLanguage } from "@/lib/language-context"
 import { isHomePath, translatePath } from "@/lib/routes"
-import { LANGS, type Lang } from "@/lib/translations"
+import { LANGS, type Lang } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 const LABELS: Record<Lang, string> = { tr: "Türkçe", en: "English" }

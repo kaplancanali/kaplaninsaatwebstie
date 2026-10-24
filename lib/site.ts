@@ -1,7 +1,7 @@
 import { SERVICE_AREAS } from "@/lib/data/areas"
 
 export const SITE = {
-  name: "Kaplan İnşaat",
+  name: "MKaplan İnşaat",
   /** Canonical origin — the apex domain redirects here. */
   url: "https://www.mkaplaninsaat.com",
   phones: {

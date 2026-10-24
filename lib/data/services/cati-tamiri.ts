@@ -13,7 +13,7 @@ export const catiTamiri: ServicePage = {
   content: {
     tr: {
       title: "Çatı Tamiri ve Komple Çatı Yenileme",
-      metaTitle: "Çatı Tamiri ve Komple Çatı Yenileme | Kaplan İnşaat Kocaeli",
+      metaTitle: "Çatı Tamiri ve Komple Çatı Yenileme | MKaplan İnşaat Kocaeli",
       metaDescription:
         "Çatınız akıtıyor mu? Tamirin mi komple yenilemenin mi gerektiğini nasıl anlarsınız, hangi arızalar hızla onarılır? Kocaeli'de ücretsiz keşif ve garantili çatı tamiri.",
       summary: "Sızıntı, kırık kiremit, fırtına hasarı ve yıpranmış çatılar için onarım ya da komple yenileme.",
@@ -89,7 +89,7 @@ export const catiTamiri: ServicePage = {
     },
     en: {
       title: "Roof Repair and Full Roof Renewal",
-      metaTitle: "Roof Repair and Full Roof Renewal | Kaplan İnşaat Kocaeli",
+      metaTitle: "Roof Repair and Full Roof Renewal | MKaplan İnşaat Kocaeli",
       metaDescription:
         "Is your roof leaking? How to tell whether you need a repair or a full renewal, and which faults can be fixed quickly. Free inspection and guaranteed roof repair in Kocaeli.",
       summary: "Repair or full renewal for leaks, broken tiles, storm damage and worn-out roofs.",

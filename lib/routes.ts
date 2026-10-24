@@ -1,4 +1,4 @@
-import { LANG_PATH, type Lang } from "@/lib/translations"
+import { LANG_PATH, type Lang } from "@/lib/i18n"
 import { SERVICE_NAV } from "@/lib/data/services/nav"
 
 /** Base path of the service guide pages per language. */

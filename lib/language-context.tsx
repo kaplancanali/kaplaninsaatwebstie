@@ -1,25 +1,26 @@
 "use client"
 
 import { createContext, useContext } from "react"
-import { translations, type Lang, type Translations } from "./translations"
+import type { Lang } from "./i18n"
+import type { ClientStrings } from "./translations"
 
 interface LanguageContextValue {
   lang: Lang
-  t: Translations
+  t: ClientStrings
 }
 
-const LanguageContext = createContext<LanguageContextValue>({
-  lang: "tr",
-  t: translations.tr,
-})
+const LanguageContext = createContext<LanguageContextValue | null>(null)
 
-/** The language comes from the route (/ = TR, /en = EN), so it is known during SSR. */
-export function LanguageProvider({ lang, children }: { lang: Lang; children: React.ReactNode }) {
-  return (
-    <LanguageContext.Provider value={{ lang, t: translations[lang] }}>
-      {children}
-    </LanguageContext.Provider>
-  )
+/**
+ * The language comes from the route (/ = TR, /en = EN). The server passes in
+ * just the strings client components need, in that language only.
+ */
+export function LanguageProvider({ lang, t, children }: { lang: Lang; t: ClientStrings; children: React.ReactNode }) {
+  return <LanguageContext.Provider value={{ lang, t }}>{children}</LanguageContext.Provider>
 }
 
-export const useLanguage = () => useContext(LanguageContext)
+export function useLanguage() {
+  const value = useContext(LanguageContext)
+  if (!value) throw new Error("useLanguage must be used inside LanguageProvider")
+  return value
+}

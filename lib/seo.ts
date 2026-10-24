@@ -77,10 +77,8 @@ export function buildMetadata(lang: Lang): Metadata {
 }
 
 export const siteViewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#f8fafc" },
-    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
-  ],
+  // Dark is the default theme, so the browser UI matches it.
+  themeColor: "#0b1120",
   width: "device-width",
   initialScale: 1,
 }

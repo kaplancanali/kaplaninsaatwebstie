@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { useLanguage } from "@/lib/language-context"
-import { LANG_PATH } from "@/lib/translations"
+import { LANG_PATH } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 import logo from "@/public/logo.jpg"
 
@@ -32,7 +32,7 @@ export function SiteLogo({ tone = "default", className, linked = true }: SiteLog
           tone === "inverse" ? "text-white" : "text-foreground"
         )}
       >
-        Kaplan <span className={tone === "inverse" ? "text-copper-400" : "text-brand"}>İnşaat</span>
+        MKaplan <span className={tone === "inverse" ? "text-copper-400" : "text-brand"}>İnşaat</span>
       </span>
     </>
   )

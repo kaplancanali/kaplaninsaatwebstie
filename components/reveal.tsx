@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useReducedMotion } from "framer-motion"
+import { m, useReducedMotion } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 /** Fades and slides its content in once when scrolled into view. */
@@ -24,7 +24,7 @@ export function Reveal({
     return <Tag className={className}>{children}</Tag>
   }
 
-  const Motion = as === "li" ? motion.li : motion.div
+  const Motion = as === "li" ? m.li : m.div
   return (
     <Motion
       className={cn(className)}

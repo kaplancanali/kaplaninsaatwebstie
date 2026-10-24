@@ -5,7 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import {
   AnimatePresence,
-  motion,
+  m,
   useMotionValueEvent,
   useReducedMotion,
   useScroll,
@@ -307,7 +307,7 @@ export function Header() {
           </div>
         </div>
 
-        <motion.div
+        <m.div
           aria-hidden
           className="absolute inset-x-0 bottom-0 h-0.5 origin-left bg-gradient-to-r from-copper-600 to-copper-400"
           style={{ scaleX: scrollYProgress }}
@@ -316,7 +316,7 @@ export function Header() {
 
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <m.div
             ref={menuRef}
             id="mobile-menu"
             role="dialog"
@@ -345,7 +345,7 @@ export function Header() {
             <nav aria-label={t.nav.mainNav} className="site-container relative flex-1 py-8">
               <ul className="space-y-1">
                 {NAV_SECTIONS.map((s, i) => (
-                  <motion.li
+                  <m.li
                     key={s.id}
                     initial={reduce ? false : { opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -363,7 +363,7 @@ export function Header() {
                         {s.label(t)}
                       </span>
                     </a>
-                  </motion.li>
+                  </m.li>
                 ))}
               </ul>
 
@@ -403,7 +403,7 @@ export function Header() {
                 </a>
               </Button>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

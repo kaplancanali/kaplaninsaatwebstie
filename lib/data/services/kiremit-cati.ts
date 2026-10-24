@@ -13,7 +13,7 @@ export const kiremitCati: ServicePage = {
   content: {
     tr: {
       title: "Kiremit Çatı Nedir? Kiremit Çatı Yapımı ve Aktarma",
-      metaTitle: "Kiremit Çatı Nedir? Kiremit Çatı Yapımı ve Aktarma | Kaplan İnşaat",
+      metaTitle: "Kiremit Çatı Nedir? Kiremit Çatı Yapımı ve Aktarma | MKaplan İnşaat",
       metaDescription:
         "Kiremit çatı nedir, kil ve beton kiremit farkları, kiremit çatı yapımı ve çatı aktarma aşamaları. Kocaeli'de ücretsiz keşif ile kiremit çatı uygulaması.",
       summary: "Geleneksel görünümlü, nefes alan ve iyi yalıtım sağlayan kiremit çatı yapımı ve aktarma.",
@@ -85,7 +85,7 @@ export const kiremitCati: ServicePage = {
     },
     en: {
       title: "What Is a Tile Roof? Tile Roof Installation and Re-laying",
-      metaTitle: "What Is a Tile Roof? Installation and Re-laying | Kaplan İnşaat",
+      metaTitle: "What Is a Tile Roof? Installation and Re-laying | MKaplan İnşaat",
       metaDescription:
         "What a tile roof is, clay vs. concrete tiles, tile roof installation and re-laying steps. Tile roofing in Kocaeli with a free inspection.",
       summary: "Traditional-looking, breathable tile roofs with good insulation — new builds and re-laying.",

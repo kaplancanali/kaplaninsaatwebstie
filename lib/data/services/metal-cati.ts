@@ -13,7 +13,7 @@ export const metalCati: ServicePage = {
   content: {
     tr: {
       title: "Metal Çatı Nedir? Trapez Sac ve Sandviç Panel Çatı",
-      metaTitle: "Metal Çatı Nedir? Trapez Sac ve Sandviç Panel | Kaplan İnşaat",
+      metaTitle: "Metal Çatı Nedir? Trapez Sac ve Sandviç Panel | MKaplan İnşaat",
       metaDescription:
         "Metal çatı nedir, trapez sac ile sandviç panel arasındaki farklar, avantajları ve uygulama aşamaları. Kocaeli genelinde ücretsiz keşif ile metal çatı uygulaması.",
       summary: "Trapez sac ve sandviç panel ile hafif, hızlı monte edilen ve uzun ömürlü çatı çözümü.",
@@ -79,7 +79,7 @@ export const metalCati: ServicePage = {
     },
     en: {
       title: "What Is a Metal Roof? Trapezoidal Sheet and Sandwich Panel Roofing",
-      metaTitle: "What Is a Metal Roof? Trapezoidal Sheet & Sandwich Panel | Kaplan İnşaat",
+      metaTitle: "What Is a Metal Roof? Trapezoidal Sheet & Sandwich Panel | MKaplan İnşaat",
       metaDescription:
         "What a metal roof is, the difference between trapezoidal sheet and sandwich panel, benefits and installation steps. Metal roofing across Kocaeli with a free inspection.",
       summary: "A light, fast-to-install and long-lasting roof with trapezoidal sheets or sandwich panels.",

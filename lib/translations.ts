@@ -1,16 +1,18 @@
-export type Lang = "tr" | "en"
+import type { Lang } from "./i18n"
+
+export { LANGS, LANG_PATH, type Lang } from "./i18n"
 
 const tr = {
   // ── Meta (SEO) ─────────────────────────────────────────────────
   meta: {
-    title: "Kaplan İnşaat | Kocaeli Çatı ve Oluk Sistemleri",
+    title: "MKaplan İnşaat | Kocaeli Çatı ve Oluk Sistemleri",
     description:
       "Kocaeli genelinde profesyonel çatı sistemleri, eksiz oluk sistemleri ve izolasyon hizmetleri. İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra. Ücretsiz keşif, garantili işçilik.",
     ogDescription:
       "Kocaeli genelinde profesyonel çatı sistemleri, eksiz oluk sistemleri ve izolasyon hizmetleri. Ücretsiz keşif, garantili işçilik.",
     keywords:
       "çatı sistemleri, eksiz oluk, izolasyon, membran, Kocaeli, İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra, çatı ustası, çatı tamiri",
-    ogAlt: "Kaplan İnşaat çatı ve oluk uygulamaları",
+    ogAlt: "MKaplan İnşaat çatı ve oluk uygulamaları",
   },
 
   // ── Ortak ──────────────────────────────────────────────────────
@@ -38,7 +40,7 @@ const tr = {
     mainNav: "Ana menü",
     openMenu: "Menüyü aç",
     closeMenu: "Menüyü kapat",
-    home: "Kaplan İnşaat ana sayfa",
+    home: "MKaplan İnşaat ana sayfa",
     language: "Dil seçimi",
   },
 
@@ -57,7 +59,7 @@ const tr = {
     stat724Label: "Destek",
     scrollLabel: "Aşağı kaydır",
     imageAlt: "Kocaeli'de kiremit çatı yenileme uygulaması: su yalıtım membranı üzerine kiremit döşemesi",
-    callAria: "Hemen arayın: +90 539 913 06 46",
+    callAria: "Hemen Ara: +90 539 913 06 46",
   },
 
   // ── Trust Badges ───────────────────────────────────────────────
@@ -163,7 +165,7 @@ const tr = {
     badge: "Neden Biz?",
     title: "Güvenilir Çatı Çözüm Ortağınız",
     description:
-      "Kaplan İnşaat olarak Kocaeli ve çevresinde yılların verdiği tecrübe ile çatı sistemleri, eksiz oluk ve izolasyon konusunda profesyonel hizmet sunuyoruz.",
+      "MKaplan İnşaat olarak Kocaeli ve çevresinde yılların verdiği tecrübe ile çatı sistemleri, eksiz oluk ve izolasyon konusunda profesyonel hizmet sunuyoruz.",
     benefits: [
       "Ücretsiz yerinde keşif",
       "Detaylı proje teklifi",
@@ -218,7 +220,7 @@ const tr = {
       },
       {
         name: "Ayşe Şahin", location: "Gölcük",
-        comment: "Ücretsiz keşfe geldiler, detaylı bilgi verdiler. İşi söyledikleri tarihte bitirdiler. Teşekkürler Kaplan İnşaat!",
+        comment: "Ücretsiz keşfe geldiler, detaylı bilgi verdiler. İşi söyledikleri tarihte bitirdiler. Teşekkürler MKaplan İnşaat!",
       },
       {
         name: "Mustafa Öztürk", location: "Kartepe",
@@ -368,7 +370,7 @@ const tr = {
     contactTitle: "İletişim",
     whatsappLink: "WhatsApp İletişim",
     location: "Kocaeli, Türkiye",
-    copyright: "Kaplan İnşaat. Tüm hakları saklıdır.",
+    copyright: "MKaplan İnşaat. Tüm hakları saklıdır.",
     seoLine: "Kocaeli Çatı Ustası | İzmit Oluk Sistemleri | Gebze Çatı İzolasyonu",
     social: "Sosyal medya ve iletişim",
     backToTop: "Başa dön",
@@ -382,7 +384,7 @@ const tr = {
     indexTitle: "Hizmetlerimiz ve Bilmeniz Gerekenler",
     indexDescription:
       "Çatı, oluk ve yalıtım hizmetlerimizi tek tek inceleyin: her sayfada ne olduğunu, nasıl uygulandığını, avantajlarını ve ne zaman yaptırmanız gerektiğini bulabilirsiniz.",
-    indexMetaTitle: "Hizmetlerimiz | Çatı, Oluk ve Yalıtım Rehberi | Kaplan İnşaat",
+    indexMetaTitle: "Hizmetlerimiz | Çatı, Oluk ve Yalıtım Rehberi | MKaplan İnşaat",
     indexMetaDescription:
       "Metal çatı, kiremit çatı, çatı tamiri, eksiz oluk, membran, çatı ısı yalıtımı ve teras su yalıtımı hakkında bilmeniz gerekenler. Kocaeli genelinde ücretsiz keşif.",
     categories: { cati: "Çatı Sistemleri", oluk: "Oluk Sistemleri", izolasyon: "İzolasyon & Yalıtım" },
@@ -411,14 +413,14 @@ const tr = {
 
 const en: typeof tr = {
   meta: {
-    title: "Kaplan İnşaat | Roofing & Gutter Systems in Kocaeli",
+    title: "MKaplan İnşaat | Roofing & Gutter Systems in Kocaeli",
     description:
       "Professional roofing systems, seamless gutters and insulation services across Kocaeli. İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra. Free inspection, guaranteed workmanship.",
     ogDescription:
       "Professional roofing systems, seamless gutters and insulation services across Kocaeli. Free inspection, guaranteed workmanship.",
     keywords:
       "roofing, seamless gutter, insulation, waterproofing membrane, Kocaeli, İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra, roofing contractor, roof repair",
-    ogAlt: "Kaplan İnşaat roofing and gutter projects",
+    ogAlt: "MKaplan İnşaat roofing and gutter projects",
   },
 
   common: {
@@ -444,7 +446,7 @@ const en: typeof tr = {
     mainNav: "Main menu",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    home: "Kaplan İnşaat home page",
+    home: "MKaplan İnşaat home page",
     language: "Language",
   },
 
@@ -462,7 +464,7 @@ const en: typeof tr = {
     stat724Label: "Support",
     scrollLabel: "Scroll down",
     imageAlt: "Tile roof renewal in Kocaeli: tiles being laid over a waterproofing membrane",
-    callAria: "Call now: +90 539 913 06 46",
+    callAria: "Call Now: +90 539 913 06 46",
   },
 
   trustLabel: "Our guarantees",
@@ -563,7 +565,7 @@ const en: typeof tr = {
     badge: "Why Us?",
     title: "Your Trusted Roofing Partner",
     description:
-      "As Kaplan İnşaat, we have been delivering professional roofing systems, seamless gutters and insulation services across Kocaeli and surroundings for over 15 years.",
+      "As MKaplan İnşaat, we have been delivering professional roofing systems, seamless gutters and insulation services across Kocaeli and surroundings for over 15 years.",
     benefits: [
       "Free on-site inspection",
       "Detailed project quote",
@@ -617,7 +619,7 @@ const en: typeof tr = {
       },
       {
         name: "Ayşe Şahin", location: "Gölcük",
-        comment: "They came for a free inspection and gave us detailed information. They finished the job exactly on the date they promised. Thank you Kaplan İnşaat!",
+        comment: "They came for a free inspection and gave us detailed information. They finished the job exactly on the date they promised. Thank you MKaplan İnşaat!",
       },
       {
         name: "Mustafa Öztürk", location: "Kartepe",
@@ -762,7 +764,7 @@ const en: typeof tr = {
     contactTitle: "Contact",
     whatsappLink: "WhatsApp Contact",
     location: "Kocaeli, Turkey",
-    copyright: "Kaplan İnşaat. All rights reserved.",
+    copyright: "MKaplan İnşaat. All rights reserved.",
     seoLine: "Kocaeli Roofing Contractor | İzmit Gutter Systems | Gebze Roof Insulation",
     social: "Social media and contact",
     backToTop: "Back to top",
@@ -775,7 +777,7 @@ const en: typeof tr = {
     indexTitle: "Our Services and What You Should Know",
     indexDescription:
       "Explore our roofing, gutter and insulation services one by one: each page explains what it is, how it is done, its benefits and when you need it.",
-    indexMetaTitle: "Our Services | Roofing, Gutter and Insulation Guide | Kaplan İnşaat",
+    indexMetaTitle: "Our Services | Roofing, Gutter and Insulation Guide | MKaplan İnşaat",
     indexMetaDescription:
       "What you should know about metal roofing, tile roofing, roof repair, seamless gutters, membrane, roof insulation and terrace waterproofing. Free inspection across Kocaeli.",
     categories: { cati: "Roofing Systems", oluk: "Gutter Systems", izolasyon: "Insulation & Waterproofing" },
@@ -803,9 +805,26 @@ export type Translations = typeof tr
 
 export const translations: Record<Lang, Translations> = { tr, en }
 
-export const LANGS: Lang[] = ["tr", "en"]
-
-/** Route path for each language — TR is served at the root. */
-export const LANG_PATH: Record<Lang, string> = { tr: "/", en: "/en" }
-
 export const getT = (lang: Lang) => translations[lang]
+
+/**
+ * The few strings client components need (header, footer, floating buttons).
+ * Only this subset is sent to the browser; everything else renders on the server.
+ */
+export function clientStrings(t: Translations) {
+  return {
+    nav: t.nav,
+    footer: t.footer,
+    whatsapp: t.whatsapp,
+    common: { callNow: t.common.callNow },
+    contact: { phoneCard: t.contact.phoneCard },
+    hero: { callAria: t.hero.callAria },
+    servicePages: {
+      allServices: t.servicePages.allServices,
+      guideMenu: t.servicePages.guideMenu,
+      categories: t.servicePages.categories,
+    },
+  }
+}
+
+export type ClientStrings = ReturnType<typeof clientStrings>

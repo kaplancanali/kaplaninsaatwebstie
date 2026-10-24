@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useReducedMotion, type Variants } from "framer-motion"
+import { m, useReducedMotion, type Variants } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const EASE = [0.16, 1, 0.3, 1] as const
@@ -43,17 +43,17 @@ export function ImageReveal({
   }
 
   return (
-    <motion.div
+    <m.div
       className={cn("relative", className)}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <motion.div className="absolute inset-0 overflow-hidden" variants={clip}>
-        <motion.div className="absolute inset-0" variants={zoom}>
+      <m.div className="absolute inset-0 overflow-hidden" variants={clip}>
+        <m.div className="absolute inset-0" variants={zoom}>
           {children}
-        </motion.div>
-      </motion.div>
-    </motion.div>
+        </m.div>
+      </m.div>
+    </m.div>
   )
 }

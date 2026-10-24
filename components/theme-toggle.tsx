@@ -46,10 +46,11 @@ export function ThemeToggle({
   const mode = theme === "system" ? "system" : isDark ? "dark" : "light"
   const label = LABELS[lang][mode]
 
+  // Dark is the default, so the first click goes to light: dark → light → system → dark.
   const cycle = () => {
-    if (theme === "light") setTheme("dark")
-    else if (theme === "dark") setTheme("system")
-    else setTheme("light")
+    if (theme === "dark") setTheme("light")
+    else if (theme === "light") setTheme("system")
+    else setTheme("dark")
   }
 
   const Icon = mode === "system" ? Monitor : mode === "dark" ? Moon : Sun
