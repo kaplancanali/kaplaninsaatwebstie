@@ -1,23 +1,50 @@
 "use client"
 
+import { useSyncExternalStore } from "react"
 import { useTheme } from "next-themes"
-import { useEffect, useState } from "react"
 import { Sun, Moon, Monitor } from "lucide-react"
+import { useLanguage } from "@/lib/language-context"
 import { cn } from "@/lib/utils"
 
-export function ThemeToggle({ className }: { className?: string }) {
+const subscribe = () => () => {}
+
+/** false during SSR/hydration, true afterwards — the theme is only known on the client. */
+const useMounted = () =>
+  useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false
+  )
+
+const LABELS = {
+  tr: { system: "Sistem teması", dark: "Koyu tema", light: "Açık tema" },
+  en: { system: "System theme", dark: "Dark theme", light: "Light theme" },
+}
+
+export function ThemeToggle({
+  className,
+  tone = "default",
+}: {
+  className?: string
+  tone?: "default" | "inverse"
+}) {
   const { theme, setTheme, resolvedTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const { lang } = useLanguage()
+  const mounted = useMounted()
 
-  useEffect(() => setMounted(true), [])
+  const base = cn(
+    "relative w-9 h-9 rounded-xl flex items-center justify-center border transition-colors",
+    tone === "inverse"
+      ? "border-white/20 bg-white/5 text-white hover:bg-white/15"
+      : "border-border bg-muted/60 text-foreground hover:border-brand/40 hover:text-brand",
+    className
+  )
 
-  if (!mounted) {
-    return (
-      <div className={cn("w-9 h-9 rounded-xl bg-muted animate-pulse", className)} />
-    )
-  }
+  if (!mounted) return <div className={base} aria-hidden />
 
   const isDark = resolvedTheme === "dark"
+  const mode = theme === "system" ? "system" : isDark ? "dark" : "light"
+  const label = LABELS[lang][mode]
 
   const cycle = () => {
     if (theme === "light") setTheme("dark")
@@ -25,32 +52,11 @@ export function ThemeToggle({ className }: { className?: string }) {
     else setTheme("light")
   }
 
-  const icon =
-    theme === "system" ? (
-      <Monitor className="w-4 h-4" />
-    ) : isDark ? (
-      <Moon className="w-4 h-4" />
-    ) : (
-      <Sun className="w-4 h-4" />
-    )
-
-  const label =
-    theme === "system" ? "Sistem teması" : isDark ? "Koyu tema" : "Açık tema"
+  const Icon = mode === "system" ? Monitor : mode === "dark" ? Moon : Sun
 
   return (
-    <button
-      onClick={cycle}
-      aria-label={label}
-      title={label}
-      className={cn(
-        "relative w-9 h-9 rounded-xl flex items-center justify-center",
-        "border border-border bg-muted/60 hover:bg-muted text-foreground",
-        "hover:border-primary/40 hover:text-primary transition-all duration-200",
-        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
-        className
-      )}
-    >
-      {icon}
+    <button type="button" onClick={cycle} aria-label={label} title={label} className={base}>
+      <Icon className="w-4 h-4" aria-hidden />
     </button>
   )
 }

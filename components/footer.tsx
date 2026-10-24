@@ -4,11 +4,13 @@ import Link from "next/link"
 import { Phone, Instagram } from "lucide-react"
 import { SiteLogo } from "@/components/site-logo"
 import { useLanguage } from "@/lib/language-context"
+import { SERVICE_NAV } from "@/lib/data/services/nav"
+import { SERVICES_BASE, servicePath } from "@/lib/routes"
 
 const areas = ["İzmit", "Gebze", "Darıca", "Körfez", "Başiskele", "Gölcük", "Kartepe", "Kandıra"]
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const f = t.footer
 
   return (
@@ -37,11 +39,18 @@ export function Footer() {
           <div>
             <h3 className="font-bold text-foreground mb-4">{f.servicesTitle}</h3>
             <ul className="space-y-3">
-              {f.services.map((service, index) => (
-                <li key={index}>
-                  <Link href="#hizmetler" className="text-muted-foreground hover:text-primary transition-colors text-sm">{service}</Link>
+              {SERVICE_NAV.map((service) => (
+                <li key={service.id}>
+                  <Link href={servicePath(lang, service.slug[lang])} className="text-muted-foreground hover:text-brand transition-colors text-sm">
+                    {service.name[lang]}
+                  </Link>
                 </li>
               ))}
+              <li>
+                <Link href={SERVICES_BASE[lang]} className="text-brand font-medium hover:underline text-sm">
+                  {t.servicePages.allServices}
+                </Link>
+              </li>
             </ul>
           </div>
 

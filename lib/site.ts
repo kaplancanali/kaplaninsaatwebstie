@@ -12,7 +12,8 @@ export const SITE = {
   instagramHandle: "@kaplaninsaat41",
   locale: "tr_TR",
   region: "Kocaeli",
+  /** Districts served — also used for SEO copy and structured data. */
+  areas: ["İzmit", "Gebze", "Darıca", "Körfez", "Başiskele", "Gölcük", "Kartepe", "Kandıra"],
   ogImage: "/gallery/cati/3.jpg",
-  heroImage: "/gallery/cati/3.jpg",
   whyUsImage: "/gallery/cati/1.jpg",
 } as const

@@ -1,6 +1,18 @@
 export type Lang = "tr" | "en"
 
 const tr = {
+  // ── Meta (SEO) ─────────────────────────────────────────────────
+  meta: {
+    title: "Kaplan İnşaat | Kocaeli Çatı ve Oluk Sistemleri",
+    description:
+      "Kocaeli genelinde profesyonel çatı sistemleri, eksiz oluk sistemleri ve izolasyon hizmetleri. İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra. Ücretsiz keşif, garantili işçilik.",
+    ogDescription:
+      "Kocaeli genelinde profesyonel çatı sistemleri, eksiz oluk sistemleri ve izolasyon hizmetleri. Ücretsiz keşif, garantili işçilik.",
+    keywords:
+      "çatı sistemleri, eksiz oluk, izolasyon, membran, Kocaeli, İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra, çatı ustası, çatı tamiri",
+    ogAlt: "Kaplan İnşaat çatı ve oluk uygulamaları",
+  },
+
   // ── Ortak ──────────────────────────────────────────────────────
   common: {
     freeInspection: "Ücretsiz Keşif Al",
@@ -11,6 +23,7 @@ const tr = {
     send: "Gönder",
     sending: "Gönderiliyor...",
     sent: "Gönderildi!",
+    skipToContent: "İçeriğe geç",
   },
 
   // ── Nav ────────────────────────────────────────────────────────
@@ -22,6 +35,11 @@ const tr = {
     contact: "İletişim",
     call: "Hemen Ara",
     freeInspection: "Ücretsiz Keşif",
+    mainNav: "Ana menü",
+    openMenu: "Menüyü aç",
+    closeMenu: "Menüyü kapat",
+    home: "Kaplan İnşaat ana sayfa",
+    language: "Dil seçimi",
   },
 
   // ── Hero ───────────────────────────────────────────────────────
@@ -38,6 +56,8 @@ const tr = {
     stat724: "7/24",
     stat724Label: "Destek",
     scrollLabel: "Aşağı kaydır",
+    imageAlt: "Kocaeli'de kiremit çatı yenileme uygulaması: su yalıtım membranı üzerine kiremit döşemesi",
+    callAria: "Hemen arayın: +90 539 913 06 46",
   },
 
   // ── Trust Badges ───────────────────────────────────────────────
@@ -101,10 +121,6 @@ const tr = {
       "Kocaeli ve çevresinde tamamladığımız projeleri hizmet türüne göre inceleyebilirsiniz. Bir görsele tıklayarak büyütebilirsiniz.",
     instagram: "Daha Fazlası İçin Instagram",
     photoPreview: "Fotoğraf önizleme",
-    before: "Önce",
-    after: "Sonra",
-    beforeAfterTitle: "Önce / Sonra",
-    beforeAfterHint: "Kaydırarak karşılaştırın. Gerçek proje görselleri yakında eklenecek.",
     categories: [
       {
         label: "Çatı Sistemleri",
@@ -337,6 +353,32 @@ const tr = {
     seoLine: "Kocaeli Çatı Ustası | İzmit Oluk Sistemleri | Gebze Çatı İzolasyonu",
   },
 
+  // ── Hizmet rehberi sayfaları ───────────────────────────────────
+  servicePages: {
+    home: "Ana Sayfa",
+    breadcrumb: "Sayfa konumu",
+    indexEyebrow: "Hizmet Rehberi",
+    indexTitle: "Hizmetlerimiz ve Bilmeniz Gerekenler",
+    indexDescription:
+      "Çatı, oluk ve yalıtım hizmetlerimizi tek tek inceleyin: her sayfada ne olduğunu, nasıl uygulandığını, avantajlarını ve ne zaman yaptırmanız gerektiğini bulabilirsiniz.",
+    indexMetaTitle: "Hizmetlerimiz | Çatı, Oluk ve Yalıtım Rehberi | Kaplan İnşaat",
+    indexMetaDescription:
+      "Metal çatı, kiremit çatı, çatı tamiri, eksiz oluk, membran, çatı ısı yalıtımı ve teras su yalıtımı hakkında bilmeniz gerekenler. Kocaeli genelinde ücretsiz keşif.",
+    categories: { cati: "Çatı Sistemleri", oluk: "Oluk Sistemleri", izolasyon: "İzolasyon & Yalıtım" },
+    readMore: "Detaylı bilgi",
+    allServices: "Tüm hizmetler",
+    guideMenu: "Hizmet rehberi",
+    benefitsTitle: "Avantajları",
+    whenTitle: "Ne zaman yaptırmalısınız?",
+    faqTitle: "Sık sorulan sorular",
+    relatedTitle: "İlgili hizmetler",
+    asideTitle: "Ücretsiz keşif isteyin",
+    asideText: "Kocaeli genelinde yerinde inceleme yapıyor, size net bir teklif sunuyoruz.",
+    areasNote: "Hizmet bölgeleri: İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra",
+    ctaTitle: "Projeniz için ücretsiz keşif",
+    ctaText: "Uzman ekibimiz yerinde inceleme yapar, size en uygun çözümü ve net teklifi sunar.",
+  },
+
   // ── WhatsApp ───────────────────────────────────────────────────
   whatsapp: {
     tooltip: "WhatsApp ile Yazın",
@@ -347,6 +389,17 @@ const tr = {
 // ── English ────────────────────────────────────────────────────────────────────
 
 const en: typeof tr = {
+  meta: {
+    title: "Kaplan İnşaat | Roofing & Gutter Systems in Kocaeli",
+    description:
+      "Professional roofing systems, seamless gutters and insulation services across Kocaeli. İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra. Free inspection, guaranteed workmanship.",
+    ogDescription:
+      "Professional roofing systems, seamless gutters and insulation services across Kocaeli. Free inspection, guaranteed workmanship.",
+    keywords:
+      "roofing, seamless gutter, insulation, waterproofing membrane, Kocaeli, İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra, roofing contractor, roof repair",
+    ogAlt: "Kaplan İnşaat roofing and gutter projects",
+  },
+
   common: {
     freeInspection: "Get Free Inspection",
     callNow: "Call Now",
@@ -356,6 +409,7 @@ const en: typeof tr = {
     send: "Send",
     sending: "Sending...",
     sent: "Sent!",
+    skipToContent: "Skip to content",
   },
 
   nav: {
@@ -366,6 +420,11 @@ const en: typeof tr = {
     contact: "Contact",
     call: "Call Now",
     freeInspection: "Free Inspection",
+    mainNav: "Main menu",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    home: "Kaplan İnşaat home page",
+    language: "Language",
   },
 
   hero: {
@@ -381,6 +440,8 @@ const en: typeof tr = {
     stat724: "24/7",
     stat724Label: "Support",
     scrollLabel: "Scroll down",
+    imageAlt: "Tile roof renewal in Kocaeli: tiles being laid over a waterproofing membrane",
+    callAria: "Call now: +90 539 913 06 46",
   },
 
   trustBadges: [
@@ -441,10 +502,6 @@ const en: typeof tr = {
       "Browse the projects we have completed in Kocaeli and surrounding areas by service type. Click any image to enlarge.",
     instagram: "More on Instagram",
     photoPreview: "Photo preview",
-    before: "Before",
-    after: "After",
-    beforeAfterTitle: "Before / After",
-    beforeAfterHint: "Drag to compare. Real project photos will be added here.",
     categories: [
       {
         label: "Roofing Systems",
@@ -669,10 +726,44 @@ const en: typeof tr = {
     seoLine: "Kocaeli Roofing Contractor | İzmit Gutter Systems | Gebze Roof Insulation",
   },
 
+  servicePages: {
+    home: "Home",
+    breadcrumb: "Breadcrumb",
+    indexEyebrow: "Service Guide",
+    indexTitle: "Our Services and What You Should Know",
+    indexDescription:
+      "Explore our roofing, gutter and insulation services one by one: each page explains what it is, how it is done, its benefits and when you need it.",
+    indexMetaTitle: "Our Services | Roofing, Gutter and Insulation Guide | Kaplan İnşaat",
+    indexMetaDescription:
+      "What you should know about metal roofing, tile roofing, roof repair, seamless gutters, membrane, roof insulation and terrace waterproofing. Free inspection across Kocaeli.",
+    categories: { cati: "Roofing Systems", oluk: "Gutter Systems", izolasyon: "Insulation & Waterproofing" },
+    readMore: "Learn more",
+    allServices: "All services",
+    guideMenu: "Service guide",
+    benefitsTitle: "Benefits",
+    whenTitle: "When do you need it?",
+    faqTitle: "Frequently asked questions",
+    relatedTitle: "Related services",
+    asideTitle: "Request a free inspection",
+    asideText: "We inspect on-site anywhere in Kocaeli and give you a clear quote.",
+    areasNote: "Service areas: İzmit, Gebze, Darıca, Körfez, Başiskele, Gölcük, Kartepe, Kandıra",
+    ctaTitle: "Free inspection for your project",
+    ctaText: "Our expert team inspects on-site and offers you the best solution with a clear quote.",
+  },
+
   whatsapp: {
     tooltip: "Chat on WhatsApp",
     aria: "Contact via WhatsApp",
   },
 }
 
-export const translations: Record<Lang, typeof tr> = { tr, en }
+export type Translations = typeof tr
+
+export const translations: Record<Lang, Translations> = { tr, en }
+
+export const LANGS: Lang[] = ["tr", "en"]
+
+/** Route path for each language — TR is served at the root. */
+export const LANG_PATH: Record<Lang, string> = { tr: "/", en: "/en" }
+
+export const getT = (lang: Lang) => translations[lang]

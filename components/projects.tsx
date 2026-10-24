@@ -5,7 +5,6 @@ import Image from "next/image"
 import Lightbox from "yet-another-react-lightbox"
 import "yet-another-react-lightbox/styles.css"
 import { Button } from "@/components/ui/button"
-import { BeforeAfterSlider } from "@/components/before-after"
 import { Reveal } from "@/components/reveal"
 import { useLanguage } from "@/lib/language-context"
 import { SITE } from "@/lib/site"
@@ -76,17 +75,6 @@ export function Projects() {
             </button>
           ))}
         </div>
-
-        <Reveal className="mt-14 max-w-3xl mx-auto">
-          <h3 className="text-center font-heading font-bold text-xl mb-2">{g.beforeAfterTitle}</h3>
-          <p className="text-center text-sm text-muted-foreground mb-5">{g.beforeAfterHint}</p>
-          <BeforeAfterSlider
-            beforeSrc="/placeholder.svg"
-            afterSrc="/placeholder.svg"
-            beforeLabel={g.before}
-            afterLabel={g.after}
-          />
-        </Reveal>
 
         <div className="text-center mt-12">
           <Button asChild size="lg" variant="outline" className="rounded-2xl px-8">

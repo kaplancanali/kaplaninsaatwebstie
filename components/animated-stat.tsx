@@ -1,8 +1,14 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
-import { useInView } from "@/hooks/use-in-view"
-import { useReducedMotion } from "framer-motion"
+import { useEffect, useRef } from "react"
+
+/**
+ * Renders the real value on the server. On the client, if the number is
+ * scrolled into view later, it counts up to the target from START_RATIO of
+ * it — never from 0, and never visibly drops a number that is already on screen.
+ */
+const START_RATIO = 0.7
+const DURATION = 1200
 
 export function AnimatedStat({
   target,
@@ -13,28 +19,51 @@ export function AnimatedStat({
   suffix: string
   className?: string
 }) {
-  const [ref, inView] = useInView(0.4)
-  const reduce = useReducedMotion()
-  const [value, setValue] = useState(target)
-  const started = useRef(false)
+  const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
-    if (!inView || started.current || reduce) return
-    started.current = true
-    const duration = 1400
-    const startTime = performance.now()
-    const tick = (now: number) => {
-      const p = Math.min((now - startTime) / duration, 1)
-      const eased = 1 - Math.pow(1 - p, 3)
-      setValue(Math.round(eased * target))
-      if (p < 1) requestAnimationFrame(tick)
+    const el = ref.current
+    if (!el || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return
+
+    let raf = 0
+    let first = true
+    const render = (v: number) => {
+      el.textContent = `${v}${suffix}`
     }
-    requestAnimationFrame(tick)
-  }, [inView, reduce, target])
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        // Already visible on load: keep the server-rendered value as is.
+        if (first && entry.isIntersecting) return io.disconnect()
+        if (first) {
+          first = false
+          render(Math.round(target * START_RATIO))
+          return
+        }
+        if (!entry.isIntersecting) return
+        io.disconnect()
+        const from = target * START_RATIO
+        const start = performance.now()
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / DURATION, 1)
+          const eased = 1 - Math.pow(1 - p, 3)
+          render(Math.round(from + (target - from) * eased))
+          if (p < 1) raf = requestAnimationFrame(tick)
+        }
+        raf = requestAnimationFrame(tick)
+      },
+      { threshold: 0.5 }
+    )
+    io.observe(el)
+    return () => {
+      io.disconnect()
+      cancelAnimationFrame(raf)
+    }
+  }, [target, suffix])
 
   return (
     <span ref={ref} className={className}>
-      {value}
+      {target}
       {suffix}
     </span>
   )

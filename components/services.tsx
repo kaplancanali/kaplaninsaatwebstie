@@ -3,12 +3,15 @@
 import Image from "next/image"
 import { ArrowRight, Check } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import Link from "next/link"
 import { useLanguage } from "@/lib/language-context"
+import { SERVICE_CATEGORIES, servicesInCategory } from "@/lib/data/services/nav"
+import { SERVICES_BASE, servicePath } from "@/lib/routes"
 
 const images = ["/gallery/cati/2.jpg", "/gallery/oluk/3.jpg", "/gallery/izolasyon/2.jpg"]
 
 export function Services() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
   const s = t.services
 
   return (
@@ -57,6 +60,19 @@ export function Services() {
                       </span>
                     ))}
                   </div>
+                  <ul className="mb-5 grid gap-2 border-t pt-5">
+                    {servicesInCategory(SERVICE_CATEGORIES[index]).map((guide) => (
+                      <li key={guide.id}>
+                        <Link
+                          href={servicePath(lang, guide.slug[lang])}
+                          className="group/link flex items-center justify-between rounded-lg bg-muted/60 px-3 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+                        >
+                          {guide.name[lang]}
+                          <ArrowRight className="h-4 w-4 opacity-40 transition-transform group-hover/link:translate-x-0.5 group-hover/link:opacity-100" aria-hidden />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
                   <a
                     href="#iletisim"
                     className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all"
@@ -68,6 +84,16 @@ export function Services() {
               </article>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <Link
+            href={SERVICES_BASE[lang]}
+            className="inline-flex items-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:border-brand/50 hover:text-brand"
+          >
+            {t.servicePages.allServices}
+            <ArrowRight className="h-4 w-4" aria-hidden />
+          </Link>
         </div>
       </div>
     </section>

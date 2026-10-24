@@ -3,96 +3,102 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Brand palette (theme-independent) ─────────────────────────────
+   Navy = structure / trust, copper = warm accent.
+   Note: white text needs copper-700 (#c2410c, 5.2:1) to pass AA;
+   copper-500/600 are for decoration and large text only. */
+@theme {
+  --color-navy-950: #0b1120;
+  --color-navy-900: #0f172a;
+  --color-navy-800: #1e293b;
+  --color-navy-700: #334155;
+  --color-navy-600: #475569;
+
+  --color-copper-50: #fff7ed;
+  --color-copper-100: #ffedd5;
+  --color-copper-200: #fed7aa;
+  --color-copper-300: #fdba74;
+  --color-copper-400: #fb923c;
+  --color-copper-500: #f97316;
+  --color-copper-600: #ea580c;
+  --color-copper-700: #c2410c;
+  --color-copper-800: #9a3412;
+
+  --shadow-soft: 0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.14);
+  --shadow-lift: 0 2px 4px rgb(15 23 42 / 0.04), 0 24px 48px -20px rgb(15 23 42 / 0.28);
+  --shadow-glow: 0 10px 30px -10px rgb(234 88 12 / 0.55);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Semantic tokens ───────────────────────────────────────────── */
 :root {
-  --navy: #0f172a;
-  --copper: #ea580c;
-  --copper-dark: #c2410c;
   --background: #f8fafc;
   --foreground: #0f172a;
+  --surface: #f1f5f9;
   --card: #ffffff;
   --card-foreground: #0f172a;
   --popover: #ffffff;
   --popover-foreground: #0f172a;
-  --primary: #ea580c;
+  --primary: #c2410c;
+  --primary-hover: #9a3412;
   --primary-foreground: #ffffff;
+  --brand: #c2410c;
   --secondary: #f1f5f9;
   --secondary-foreground: #0f172a;
   --muted: #f1f5f9;
   --muted-foreground: #475569;
-  --accent: #ea580c;
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --accent: #fff7ed;
+  --accent-foreground: #9a3412;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
   --border: #e2e8f0;
-  --input: #e2e8f0;
-  --ring: #ea580c;
-  --chart-1: #ea580c;
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
+  --input: #cbd5e1;
+  --ring: #c2410c;
   --radius: 1rem;
-  --sidebar: #f8fafc;
-  --sidebar-foreground: #0f172a;
-  --sidebar-primary: #ea580c;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f1f5f9;
-  --sidebar-accent-foreground: #0f172a;
-  --sidebar-border: #e2e8f0;
-  --sidebar-ring: #ea580c;
 }
 
 .dark {
-  --navy: #0b1220;
-  --copper: #ea580c;
-  --copper-dark: #c2410c;
-  --background: #0f172a;
-  --foreground: #f8fafc;
-  --card: #1e293b;
-  --card-foreground: #f8fafc;
-  --popover: #1e293b;
-  --popover-foreground: #f8fafc;
-  --primary: #ea580c;
+  --background: #0b1120;
+  --foreground: #f1f5f9;
+  --surface: #0f172a;
+  --card: #131c2e;
+  --card-foreground: #f1f5f9;
+  --popover: #131c2e;
+  --popover-foreground: #f1f5f9;
+  --primary: #c2410c;
+  --primary-hover: #ea580c;
   --primary-foreground: #ffffff;
+  --brand: #fb923c;
   --secondary: #1e293b;
-  --secondary-foreground: #f8fafc;
+  --secondary-foreground: #f1f5f9;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #ea580c;
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #334155;
+  --accent: #2a1a12;
+  --accent-foreground: #fdba74;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #1e293b;
   --input: #334155;
-  --ring: #ea580c;
-  --chart-1: #ea580c;
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #0f172a;
-  --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #ea580c;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #1e293b;
-  --sidebar-accent-foreground: #f8fafc;
-  --sidebar-border: #334155;
-  --sidebar-ring: #ea580c;
+  --ring: #fb923c;
 }
 
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-manrope), var(--font-inter), ui-sans-serif, sans-serif;
-  --color-navy: var(--navy);
-  --color-copper: var(--copper);
+  --color-navy: var(--color-navy-900);
+  --color-copper: var(--color-copper-600);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
+  --color-brand: var(--brand);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
   --color-muted: var(--muted);
@@ -104,38 +110,34 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --color-chart-1: var(--chart-1);
-  --color-chart-2: var(--chart-2);
-  --color-chart-3: var(--chart-3);
-  --color-chart-4: var(--chart-4);
-  --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 8px);
+  --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-  --color-sidebar: var(--sidebar);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-ring: var(--sidebar-ring);
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 88px;
+    scroll-padding-top: 80px;
   }
   body {
     @apply bg-background text-foreground antialiased;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-heading);
+    letter-spacing: -0.02em;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-copper-200);
+    color: var(--color-navy-900);
   }
 }
 
@@ -150,12 +152,48 @@
   }
 }
 
-.roof-cut {
-  clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 100%);
+/* ── Layout ────────────────────────────────────────────────────── */
+@utility site-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 640px) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 1024px) {
+    padding-inline: 2rem;
+  }
 }
 
-.roof-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='34' viewBox='0 0 60 34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 34 L30 4 L60 34' fill='none' stroke='%23ea580c' stroke-opacity='0.12' stroke-width='1'/%3E%3C/svg%3E");
+/* ── Roof-pitch section edges ──────────────────────────────────────
+   --roof sets the rise of the slope (defaults to 4vw, max 64px). */
+@utility roof-cut-bottom {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--roof, min(4vw, 64px))), 0 100%);
+}
+@utility roof-cut-top {
+  clip-path: polygon(0 var(--roof, min(4vw, 64px)), 100% 0, 100% 100%, 0 100%);
+}
+@utility roof-peak-top {
+  clip-path: polygon(0 var(--roof, min(4vw, 64px)), 50% 0, 100% var(--roof, min(4vw, 64px)), 100% 100%, 0 100%);
+}
+
+/* ── Line patterns (tinted with currentColor via mask) ─────────── */
+@utility pattern-truss {
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='64' viewBox='0 0 120 64'%3E%3Cpath d='M0 62 L60 4 L120 62 M0 62 H120 M30 33 V62 M60 4 V62 M90 33 V62 M30 33 L60 62 L90 33' fill='none' stroke='black' stroke-width='1'/%3E%3C/svg%3E");
+  mask-size: 120px 64px;
+}
+@utility pattern-gutter {
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M4 8 V22 Q4 32 14 32 H30 Q40 32 40 22 V12 M44 8 V22 Q44 32 54 32 H70 Q80 32 80 22 V12' fill='none' stroke='black' stroke-width='1'/%3E%3C/svg%3E");
+  mask-size: 80px 40px;
+}
+@utility pattern-grid {
+  background-image:
+    linear-gradient(to right, currentColor 1px, transparent 1px),
+    linear-gradient(to bottom, currentColor 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 details > summary {
