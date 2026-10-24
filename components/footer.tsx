@@ -105,7 +105,17 @@ export function Footer() {
                 {SITE.instagramHandle}
               </a>
             </li>
-            <li className="text-sm text-white/70">{f.location}</li>
+            <li>
+              <a
+                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address.mapsQuery)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-1.5 text-sm text-white/70 transition-colors hover:text-white"
+              >
+                <MapPin className="mt-0.5 size-3.5 shrink-0 text-copper-400" aria-hidden />
+                <address className="not-italic">{SITE.address.full}</address>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -27,7 +27,14 @@ export function JsonLd({ lang }: { lang: Lang }) {
       areaServed: "TR",
       availableLanguage: ["Turkish", "English"],
     })),
-    address: { "@type": "PostalAddress", addressRegion: SITE.region, addressCountry: "TR" },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: SITE.address.street,
+      addressLocality: SITE.address.district,
+      addressRegion: SITE.address.city,
+      addressCountry: SITE.address.country,
+    },
+    hasMap: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(SITE.address.mapsQuery)}`,
     areaServed: [
       { "@type": "AdministrativeArea", name: SITE.region },
       ...SITE.areas.map((name) => ({ "@type": "City", name })),

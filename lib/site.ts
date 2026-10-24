@@ -15,6 +15,16 @@ export const SITE = {
   instagramHandle: "@kaplaninsaat41",
   locale: "tr_TR",
   region: "Kocaeli",
+  address: {
+    street: "Çınarlı Mah. Plevne Sok. No:5",
+    district: "Derince",
+    city: "Kocaeli",
+    country: "TR",
+    /** One-line form for display. */
+    full: "Çınarlı Mah. Plevne Sok. No:5, Derince / Kocaeli",
+    /** Query used for Google Maps links and the embedded map. */
+    mapsQuery: "Çınarlı Mahallesi Plevne Sokak No:5, Derince, Kocaeli",
+  },
   /** Districts served — also used for SEO copy and structured data. */
   areas: SERVICE_AREAS.map((a) => a.name),
   ogImage: "/og-image.jpg",

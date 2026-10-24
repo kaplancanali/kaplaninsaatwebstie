@@ -348,8 +348,8 @@ const tr = {
     nameError: "Lütfen adınızı ve soyadınızı yazın.",
     messageError: "Lütfen projeniz hakkında kısa bir bilgi yazın (en az 10 karakter).",
     sentNote: "WhatsApp açıldı. Mesajı göndermek için WhatsApp'ta Gönder'e dokunun.",
-    mapPlaceholder: "Harita yakında eklenecek",
-    mapOpen: "Google Haritalar'da aç",
+    addressCard: "Adres",
+    mapOpen: "Yol tarifi al",
     hoursCard: "Çalışma Saatleri",
     hours: "7 gün 24 saat ulaşabilirsiniz",
     phoneCard: "Telefon",
@@ -358,7 +358,7 @@ const tr = {
     instagramCard: "Instagram",
     locationCard: "Konum",
     location: "Kocaeli, Türkiye",
-    mapTitle: "Kocaeli Harita",
+    mapTitle: "MKaplan İnşaat konum haritası",
   },
 
   // ── Footer ─────────────────────────────────────────────────────
@@ -743,8 +743,8 @@ const en: typeof tr = {
     nameError: "Please enter your full name.",
     messageError: "Please tell us briefly about your project (at least 10 characters).",
     sentNote: "WhatsApp has opened. Tap Send in WhatsApp to deliver your message.",
-    mapPlaceholder: "Map coming soon",
-    mapOpen: "Open in Google Maps",
+    addressCard: "Address",
+    mapOpen: "Get directions",
     hoursCard: "Working Hours",
     hours: "Reachable 24/7",
     phoneCard: "Phone",
@@ -753,7 +753,7 @@ const en: typeof tr = {
     instagramCard: "Instagram",
     locationCard: "Location",
     location: "Kocaeli, Turkey",
-    mapTitle: "Kocaeli Map",
+    mapTitle: "MKaplan İnşaat location map",
   },
 
   footer: {

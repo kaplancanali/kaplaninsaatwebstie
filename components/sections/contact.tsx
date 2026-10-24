@@ -61,25 +61,32 @@ export function Contact({ lang }: { lang: Lang }) {
               ))}
             </ul>
 
-            {/* Map placeholder — swap for a Google Maps <iframe> once the address is set. */}
-            <Reveal className="relative overflow-hidden rounded-2xl bg-navy-950 text-white shadow-soft">
-              <div aria-hidden className="pattern-grid absolute inset-0 text-white/[0.06]" />
-              <div className="relative flex min-h-56 flex-col items-center justify-center gap-3 p-8 text-center">
-                <span className="flex size-12 items-center justify-center rounded-full bg-copper-600">
-                  <MapPin className="size-6" aria-hidden />
+            <Reveal className="overflow-hidden rounded-2xl border bg-card shadow-soft">
+              <div className="flex items-start gap-4 p-5">
+                <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground">
+                  <MapPin className="size-5" aria-hidden />
                 </span>
-                <p className="font-heading text-lg font-bold">{c.location}</p>
-                <p className="text-sm text-white/65">{c.mapPlaceholder}</p>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-bold text-foreground">{c.addressCard}</h3>
+                  <address className="mt-1 not-italic text-muted-foreground">{SITE.address.full}</address>
+                </div>
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(c.location)}`}
+                  href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(SITE.address.mapsQuery)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-semibold text-copper-300 hover:underline underline-offset-4"
+                  className="inline-flex shrink-0 items-center gap-1.5 self-center rounded-lg px-2 py-1 text-sm font-semibold text-brand hover:underline underline-offset-4"
                 >
                   {c.mapOpen}
                   <ExternalLink className="size-4" aria-hidden />
                 </a>
               </div>
+              <iframe
+                title={c.mapTitle}
+                src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.mapsQuery)}&z=16&hl=${lang}&output=embed`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="block h-64 w-full border-0 border-t md:h-72"
+              />
             </Reveal>
           </div>
 
