@@ -101,11 +101,15 @@ const tr = {
       "Kocaeli ve çevresinde tamamladığımız projeleri hizmet türüne göre inceleyebilirsiniz. Bir görsele tıklayarak büyütebilirsiniz.",
     instagram: "Daha Fazlası İçin Instagram",
     photoPreview: "Fotoğraf önizleme",
+    before: "Önce",
+    after: "Sonra",
+    beforeAfterTitle: "Önce / Sonra",
+    beforeAfterHint: "Kaydırarak karşılaştırın. Gerçek proje görselleri yakında eklenecek.",
     categories: [
       {
         label: "Çatı Sistemleri",
         description:
-          "Metal çatı ve kiremit kaplama uygulamalarımızdan seçilmiş sahadan kareler. Her proje teslim öncesi su tightness testi yapılmaktadır.",
+          "Metal çatı ve kiremit kaplama uygulamalarımızdan seçilmiş sahadan kareler. Her proje teslim öncesi su sızdırmazlık testi yapılmaktadır.",
       },
       {
         label: "Eksiz Oluk",
@@ -169,6 +173,8 @@ const tr = {
     badge: "Müşteri Yorumları",
     title: "Müşterilerimiz Ne Diyor?",
     subtitle: "Kocaeli genelinde yüzlerce mutlu müşterimizden bazılarının görüşleri",
+    prev: "Önceki yorum",
+    next: "Sonraki yorum",
     items: [
       {
         name: "Ahmet Yılmaz", location: "İzmit",
@@ -308,6 +314,7 @@ const tr = {
     messageLabel: "Mesajınız",
     messagePlaceholder: "Projeniz hakkında bilgi verin...",
     formNote: "Formunuz WhatsApp üzerinden bize iletilecektir",
+    phoneError: "Lütfen geçerli bir cep telefonu numarası girin (05XX XXX XX XX).",
     phoneCard: "Telefon",
     whatsappCard: "WhatsApp",
     whatsappAction: "Hemen Mesaj Gönderin",
@@ -434,6 +441,10 @@ const en: typeof tr = {
       "Browse the projects we have completed in Kocaeli and surrounding areas by service type. Click any image to enlarge.",
     instagram: "More on Instagram",
     photoPreview: "Photo preview",
+    before: "Before",
+    after: "After",
+    beforeAfterTitle: "Before / After",
+    beforeAfterHint: "Drag to compare. Real project photos will be added here.",
     categories: [
       {
         label: "Roofing Systems",
@@ -499,6 +510,8 @@ const en: typeof tr = {
     badge: "Customer Reviews",
     title: "What Our Customers Say",
     subtitle: "Reviews from some of our hundreds of satisfied customers across Kocaeli",
+    prev: "Previous review",
+    next: "Next review",
     items: [
       {
         name: "Ahmet Yılmaz", location: "İzmit",
@@ -634,6 +647,7 @@ const en: typeof tr = {
     messageLabel: "Your Message",
     messagePlaceholder: "Tell us about your project...",
     formNote: "Your form will be forwarded to us via WhatsApp",
+    phoneError: "Please enter a valid mobile number (05XX XXX XX XX).",
     phoneCard: "Phone",
     whatsappCard: "WhatsApp",
     whatsappAction: "Send a Message Now",
