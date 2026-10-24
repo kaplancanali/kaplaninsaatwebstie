@@ -1,4 +1,5 @@
 import Script from "next/script"
+import { AnalyticsEvents } from "@/components/analytics-events"
 import { SITE } from "@/lib/site"
 
 /** Google tag (gtag.js) for GA4, loaded after the page becomes interactive. */
@@ -12,6 +13,7 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${SITE.gaId}');`}
       </Script>
+      <AnalyticsEvents />
     </>
   )
 }

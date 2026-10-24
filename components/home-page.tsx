@@ -8,8 +8,8 @@ import { WhyUs } from "@/components/sections/why-us"
 import { Reviews } from "@/components/sections/reviews"
 import { Process } from "@/components/sections/process"
 import { FAQ } from "@/components/sections/faq"
-import { CTA } from "@/components/cta"
-import { Contact } from "@/components/contact"
+import { CTA } from "@/components/sections/cta"
+import { Contact } from "@/components/sections/contact"
 import { HomeJsonLd } from "@/components/json-ld"
 import type { Lang } from "@/lib/translations"
 
@@ -26,8 +26,8 @@ export function HomePage({ lang }: { lang: Lang }) {
       <Reviews lang={lang} />
       <Process lang={lang} />
       <FAQ lang={lang} />
-      <CTA />
-      <Contact />
+      <CTA lang={lang} />
+      <Contact lang={lang} />
     </SiteChrome>
   )
 }

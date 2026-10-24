@@ -1,27 +1,34 @@
 "use client"
 
-import { Phone, MessageCircle } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { MessageCircle, Phone } from "lucide-react"
 import { useLanguage } from "@/lib/language-context"
+import { SITE } from "@/lib/site"
 
+/** Fixed call / WhatsApp bar on phones and tablets (the desktop gets the floating button). */
 export function MobileCTA() {
   const { t } = useLanguage()
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-background/95 backdrop-blur-md border-t border-border p-3 safe-area-inset-bottom">
-      <div className="flex gap-3">
-        <Button asChild variant="outline" className="flex-1 rounded-xl gap-2">
-          <a href="tel:+905399130646">
-            <Phone className="w-4 h-4" />
-            {t.common.callNow}
-          </a>
-        </Button>
-        <Button asChild className="flex-1 rounded-xl gap-2">
-          <a href="https://wa.me/905399130646" target="_blank" rel="noopener noreferrer">
-            <MessageCircle className="w-4 h-4" />
-            WhatsApp
-          </a>
-        </Button>
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border/70 bg-background/90 px-3 pt-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_-12px_rgb(15_23_42/0.25)] backdrop-blur-xl lg:hidden">
+      <div className="grid grid-cols-2 gap-3">
+        <a
+          href={`tel:${SITE.phones.primary}`}
+          aria-label={t.hero.callAria}
+          className="flex h-12 items-center justify-center gap-2 rounded-xl bg-navy-900 font-semibold text-white active:translate-y-px dark:bg-navy-800"
+        >
+          <Phone className="size-5" aria-hidden />
+          {t.common.callNow}
+        </a>
+        <a
+          href={SITE.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t.whatsapp.aria}
+          className="flex h-12 items-center justify-center gap-2 rounded-xl bg-[#1fa855] font-semibold text-white active:translate-y-px"
+        >
+          <MessageCircle className="size-5" aria-hidden />
+          WhatsApp
+        </a>
       </div>
     </div>
   )
