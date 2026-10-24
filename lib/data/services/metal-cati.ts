@@ -1,4 +1,4 @@
-import image from "@/public/gallery/cati/1.jpg"
+import image from "@/public/gallery/cati/metal-cati-deniz-manzarali.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 
@@ -6,8 +6,8 @@ export const metalCati: ServicePage = {
   ...navItem("metal-cati"),
   image,
   imageAlt: {
-    tr: "Kocaeli'de tamamlanan kırmızı trapez sac metal çatı uygulaması",
-    en: "Red trapezoidal metal roof completed in Kocaeli",
+    tr: "Körfez manzaralı bir konutta tamamlanan kırmızı metal çatı uygulaması",
+    en: "Red metal roof completed on a home overlooking the gulf",
   },
   related: ["kiremit-cati", "isi-yalitimi", "eksiz-oluk"],
   content: {

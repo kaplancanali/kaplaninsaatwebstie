@@ -1,4 +1,4 @@
-import image from "@/public/gallery/izolasyon/5.jpg"
+import image from "@/public/gallery/cati/ahsap-cati-karkasi.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 
@@ -6,8 +6,8 @@ export const isiYalitimi: ServicePage = {
   ...navItem("isi-yalitimi"),
   image,
   imageAlt: {
-    tr: "Çatı yenilemesi sırasında açılmış ahşap çatı iskeleti ve yalıtım katmanı",
-    en: "Timber roof frame and insulation layer exposed during a roof renewal",
+    tr: "Yalıtım ve kaplama öncesi kurulan ahşap çatı karkası",
+    en: "Timber roof frame built before insulation and covering",
   },
   related: ["membran-cati", "metal-cati", "cati-tamiri"],
   content: {

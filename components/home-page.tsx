@@ -1,8 +1,8 @@
 import { SiteChrome } from "@/components/site-chrome"
 import { Hero } from "@/components/sections/hero"
-import { TrustBadges } from "@/components/trust-badges"
-import { Services } from "@/components/services"
-import { Projects } from "@/components/projects"
+import { TrustBand } from "@/components/sections/trust-band"
+import { Services } from "@/components/sections/services"
+import { Gallery } from "@/components/sections/gallery"
 import { ServiceAreas } from "@/components/service-areas"
 import { WhyUs } from "@/components/why-us"
 import { Reviews } from "@/components/reviews"
@@ -16,9 +16,9 @@ export function HomePage({ lang }: { lang: Lang }) {
   return (
     <SiteChrome>
       <Hero lang={lang} />
-      <TrustBadges />
-      <Services />
-      <Projects />
+      <TrustBand lang={lang} />
+      <Services lang={lang} />
+      <Gallery lang={lang} />
       <ServiceAreas />
       <WhyUs />
       <Reviews />

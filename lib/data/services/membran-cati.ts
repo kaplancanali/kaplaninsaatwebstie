@@ -1,4 +1,4 @@
-import image from "@/public/gallery/izolasyon/3.jpg"
+import image from "@/public/gallery/izolasyon/arduvazli-membran-kirmizi.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 
@@ -6,8 +6,8 @@ export const membranCati: ServicePage = {
   ...navItem("membran-cati"),
   image,
   imageAlt: {
-    tr: "Çatıda su yalıtım membranı üzerine çıtalama ve kiremit uygulaması",
-    en: "Battens and tiles being installed over a roof waterproofing membrane",
+    tr: "Düz çatıda uygulanmış kırmızı arduvazlı bitümlü membran",
+    en: "Red mineral-surfaced bituminous membrane applied on a flat roof",
   },
   related: ["teras-su-yalitimi", "isi-yalitimi", "kiremit-cati"],
   content: {

@@ -1,4 +1,4 @@
-import image from "@/public/gallery/izolasyon/2.jpg"
+import image from "@/public/gallery/oluk/eksiz-oluk-antrasit.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 

@@ -61,6 +61,7 @@ const tr = {
   },
 
   // ── Trust Badges ───────────────────────────────────────────────
+  trustLabel: "Güvencelerimiz",
   trustBadges: [
     { title: "Garantili İşçilik", description: "Tüm işlerimiz garantili" },
     { title: "Zamanında Teslim", description: "Söz verilen tarihte teslimat" },
@@ -121,6 +122,8 @@ const tr = {
       "Kocaeli ve çevresinde tamamladığımız projeleri hizmet türüne göre inceleyebilirsiniz. Bir görsele tıklayarak büyütebilirsiniz.",
     instagram: "Daha Fazlası İçin Instagram",
     photoPreview: "Fotoğraf önizleme",
+    openImage: "Fotoğrafı büyüt",
+    tabsLabel: "Galeri kategorileri",
     categories: [
       {
         label: "Çatı Sistemleri",
@@ -444,6 +447,7 @@ const en: typeof tr = {
     callAria: "Call now: +90 539 913 06 46",
   },
 
+  trustLabel: "Our guarantees",
   trustBadges: [
     { title: "Guaranteed Workmanship", description: "All our work comes with a guarantee" },
     { title: "On-Time Delivery", description: "Delivery on the promised date" },
@@ -502,6 +506,8 @@ const en: typeof tr = {
       "Browse the projects we have completed in Kocaeli and surrounding areas by service type. Click any image to enlarge.",
     instagram: "More on Instagram",
     photoPreview: "Photo preview",
+    openImage: "Enlarge photo",
+    tabsLabel: "Gallery categories",
     categories: [
       {
         label: "Roofing Systems",

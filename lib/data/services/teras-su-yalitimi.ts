@@ -1,4 +1,4 @@
-import image from "@/public/gallery/oluk/3.jpg"
+import image from "@/public/gallery/izolasyon/duz-cati-membran-antrasit.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 
@@ -6,8 +6,8 @@ export const terasSuYalitimi: ServicePage = {
   ...navItem("teras-su-yalitimi"),
   image,
   imageAlt: {
-    tr: "Bitümlü membranla su yalıtımı yapılmış düz çatı ve kenar oluğu",
-    en: "Flat roof waterproofed with bituminous membrane, with an edge gutter",
+    tr: "Bitümlü membranla su yalıtımı yapılmış antrasit düz çatı",
+    en: "Anthracite flat roof waterproofed with bituminous membrane",
   },
   related: ["membran-cati", "isi-yalitimi", "eksiz-oluk"],
   content: {

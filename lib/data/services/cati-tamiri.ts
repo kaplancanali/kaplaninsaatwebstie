@@ -1,4 +1,4 @@
-import image from "@/public/gallery/cati/4.jpg"
+import image from "@/public/gallery/cati/kiremit-cati-yenileme.jpg"
 import { navItem } from "./nav"
 import type { ServicePage } from "./types"
 

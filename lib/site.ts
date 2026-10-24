@@ -15,5 +15,5 @@ export const SITE = {
   /** Districts served — also used for SEO copy and structured data. */
   areas: ["İzmit", "Gebze", "Darıca", "Körfez", "Başiskele", "Gölcük", "Kartepe", "Kandıra"],
   ogImage: "/gallery/cati/3.jpg",
-  whyUsImage: "/gallery/cati/1.jpg",
+  whyUsImage: "/gallery/cati/metal-cati-trapez.jpg",
 } as const

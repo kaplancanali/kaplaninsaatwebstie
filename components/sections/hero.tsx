@@ -6,7 +6,7 @@ import { AnimatedStat } from "@/components/animated-stat"
 import { HERO_STATS } from "@/lib/data/site-data"
 import { getT, type Lang } from "@/lib/translations"
 import { SITE } from "@/lib/site"
-import heroImage from "@/public/gallery/cati/6.jpg"
+import heroImage from "@/public/gallery/cati/kiremit-cati-membran-uzeri.jpg"
 
 /** Roof-ridge underline drawn beneath the highlighted words. */
 function RidgeUnderline() {
