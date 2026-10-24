@@ -402,6 +402,23 @@ const tr = {
     ctaText: "Uzman ekibimiz yerinde inceleme yapar, size en uygun çözümü ve net teklifi sunar.",
   },
 
+  // ── Çerez onayı ve yasal sayfalar ──────────────────────────────
+  consent: {
+    label: "Çerez tercihi",
+    text: "Ziyaretleri ölçmek için Google Analytics çerezlerini yalnızca onayınızla kullanıyoruz. Zorunlu olmayan çerezleri reddedebilirsiniz.",
+    accept: "Kabul et",
+    reject: "Reddet",
+    settings: "Çerez ayarları",
+    mapNote: "Harita Google tarafından sağlanır ve çerez kullanabilir.",
+    mapShow: "Haritayı göster",
+  },
+  legal: {
+    kvkk: "KVKK Aydınlatma Metni",
+    cookies: "Çerez Politikası",
+    eyebrow: "Yasal",
+    updated: "Son güncelleme",
+  },
+
   // ── WhatsApp ───────────────────────────────────────────────────
   whatsapp: {
     tooltip: "WhatsApp ile Yazın",
@@ -795,6 +812,22 @@ const en: typeof tr = {
     ctaText: "Our expert team inspects on-site and offers you the best solution with a clear quote.",
   },
 
+  consent: {
+    label: "Cookie preferences",
+    text: "We use Google Analytics cookies to measure visits only with your consent. You can reject non-essential cookies.",
+    accept: "Accept",
+    reject: "Reject",
+    settings: "Cookie settings",
+    mapNote: "The map is provided by Google and may use cookies.",
+    mapShow: "Show map",
+  },
+  legal: {
+    kvkk: "Privacy Notice (KVKK)",
+    cookies: "Cookie Policy",
+    eyebrow: "Legal",
+    updated: "Last updated",
+  },
+
   whatsapp: {
     tooltip: "Chat on WhatsApp",
     aria: "Contact via WhatsApp",
@@ -816,6 +849,8 @@ export function clientStrings(t: Translations) {
     nav: t.nav,
     footer: t.footer,
     whatsapp: t.whatsapp,
+    consent: t.consent,
+    legal: t.legal,
     common: { callNow: t.common.callNow },
     contact: { phoneCard: t.contact.phoneCard },
     hero: { callAria: t.hero.callAria },

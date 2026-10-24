@@ -30,3 +30,6 @@ photos/
 
 # Duplicate logo source (site uses public/logo.jpg)
 logo.enc
+
+# Photos prepared for the Google Business Profile (not part of the site)
+google-isletme-fotograflari/

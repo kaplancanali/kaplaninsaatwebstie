@@ -6,6 +6,14 @@ export const SERVICES_BASE: Record<Lang, string> = { tr: "/hizmetler", en: "/en/
 
 export const servicePath = (lang: Lang, slug: string) => `${SERVICES_BASE[lang]}/${slug}`
 
+/** Legal pages per language. */
+export const LEGAL_PATHS = {
+  kvkk: { tr: "/kvkk-aydinlatma-metni", en: "/en/privacy-notice" },
+  cookies: { tr: "/cerez-politikasi", en: "/en/cookie-policy" },
+} satisfies Record<string, Record<Lang, string>>
+
+export type LegalPage = keyof typeof LEGAL_PATHS
+
 export const findServiceBySlug = (lang: Lang, slug: string) =>
   SERVICE_NAV.find((s) => s.slug[lang] === slug)
 
@@ -19,6 +27,9 @@ export const sectionHref = (lang: Lang, id: string, onHome: boolean) =>
 /** The same page in the other language (used by the language switcher). */
 export function translatePath(pathname: string, from: Lang, to: Lang): string {
   if (isHomePath(pathname)) return LANG_PATH[to]
+  for (const paths of Object.values(LEGAL_PATHS)) {
+    if (pathname === paths[from]) return paths[to]
+  }
   const base = SERVICES_BASE[from]
   if (pathname === base) return SERVICES_BASE[to]
   if (pathname.startsWith(base + "/")) {

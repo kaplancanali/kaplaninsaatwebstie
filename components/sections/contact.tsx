@@ -2,6 +2,7 @@ import { Clock, ExternalLink, Instagram, MapPin, MessageCircle, Phone } from "lu
 import { SectionHeading } from "@/components/ui/section-heading"
 import { Reveal } from "@/components/reveal"
 import { ContactForm } from "@/components/sections/contact-form"
+import { ConsentMap } from "@/components/sections/consent-map"
 import { getT, type Lang } from "@/lib/translations"
 import { SITE } from "@/lib/site"
 
@@ -80,12 +81,11 @@ export function Contact({ lang }: { lang: Lang }) {
                   <ExternalLink className="size-4" aria-hidden />
                 </a>
               </div>
-              <iframe
+              <ConsentMap
                 title={c.mapTitle}
                 src={`https://maps.google.com/maps?q=${encodeURIComponent(SITE.address.mapsQuery)}&z=16&hl=${lang}&output=embed`}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="block h-64 w-full border-0 border-t md:h-72"
+                note={t.consent.mapNote}
+                showLabel={t.consent.mapShow}
               />
             </Reveal>
           </div>

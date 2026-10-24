@@ -6,7 +6,8 @@ import { SiteLogo } from "@/components/site-logo"
 import { useLanguage } from "@/lib/language-context"
 import { SERVICE_NAV } from "@/lib/data/services/nav"
 import { SERVICE_AREAS } from "@/lib/data/areas"
-import { SERVICES_BASE, servicePath } from "@/lib/routes"
+import { LEGAL_PATHS, SERVICES_BASE, servicePath } from "@/lib/routes"
+import { openConsentSettings } from "@/lib/consent"
 import { SITE } from "@/lib/site"
 
 export function Footer() {
@@ -126,6 +127,17 @@ export function Footer() {
             © {new Date().getFullYear()} {f.copyright}
           </p>
           <p>{f.seoLine}</p>
+          <nav aria-label={t.legal.eyebrow} className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
+            <Link href={LEGAL_PATHS.kvkk[lang]} className="hover:text-white">
+              {t.legal.kvkk}
+            </Link>
+            <Link href={LEGAL_PATHS.cookies[lang]} className="hover:text-white">
+              {t.legal.cookies}
+            </Link>
+            <button type="button" onClick={openConsentSettings} className="hover:text-white">
+              {t.consent.settings}
+            </button>
+          </nav>
           <a href="#main" className="inline-flex items-center gap-1.5 font-medium text-white/70 hover:text-white">
             {f.backToTop}
             <ArrowUp className="size-4" aria-hidden />

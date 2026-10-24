@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next"
 import { SERVICE_NAV } from "@/lib/data/services/nav"
-import { SERVICES_BASE, servicePath } from "@/lib/routes"
+import { LEGAL_PATHS, SERVICES_BASE, servicePath } from "@/lib/routes"
 import { absoluteUrl } from "@/lib/structured-data"
 import { LANG_PATH, LANGS, type Lang } from "@/lib/translations"
 
@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       paths: { tr: servicePath("tr", s.slug.tr), en: servicePath("en", s.slug.en) },
       priority: 0.7,
     })),
+    ...Object.values(LEGAL_PATHS).map((paths) => ({ paths, priority: 0.3 })),
   ]
   const lastModified = new Date()
 
